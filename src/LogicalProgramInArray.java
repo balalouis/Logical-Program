@@ -1,9 +1,34 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class LogicalProgramInArray {
 
     static char[] characters = {'a', 'b', 'c', 'd'};
+
+    public void findMaxRepeatedElementInArray() {
+        char[] characters = {'a', 'c', 'b', 'c', 'd', 'b', 'a', 'b', 'b', 'b'};
+        Hashtable<String, Integer> hashtable = new Hashtable<>();
+
+        for (char character : characters) {
+            String key = String.valueOf(character);
+            if (hashtable.containsKey(key)) {
+                int value = hashtable.get(key) + 1;
+                hashtable.put(key, value);
+            } else {
+                hashtable.put(key, 1);
+            }
+        }
+
+        Set<String> mySet = hashtable.keySet();
+        String maxRepeatedKey = "";
+        int maxValue = 0;
+        for (String key : mySet) {
+            if (maxValue < hashtable.get(key)) {
+                maxValue = hashtable.get(key);
+                maxRepeatedKey = key;
+            }
+        }
+        System.out.println("Key: " + maxRepeatedKey + " Value is: " + hashtable.get(maxRepeatedKey));
+    }
 
     public void reverseTheArray() {
         int[] num = {1, 2, 3, 4, 5, 6, 7};
