@@ -1,11 +1,25 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class LogicalProgramInArray {
 
     static char[] characters = {'a', 'b', 'c', 'd'};
 
+    public void reverseTheArray() {
+        int[] num = {1, 2, 3, 4, 5, 6, 7};
+        System.out.println("Before: " + Arrays.toString(num));
+        int halfOfTheArraySize = num.length / 2;
+        int temp = 0;
+        for (int front = 0, back = num.length - 1; front < halfOfTheArraySize; front++, back--) {
+            temp = num[front];
+            num[front] = num[back];
+            num[back] = temp;
+        }
+        System.out.println("After: " + Arrays.toString(num));
+    }
+
     public void findSumOfConsecutiveDigitIsEqualToGivenNUmber() {
-        int[] num = {1,2,3,4,5,6,7,8,9,10};
+        int[] num = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int givenNUmber = 15;
         ArrayList<Integer> arrayList = new ArrayList<>();
         for (int i = 0; i < num.length - 1; i++) {
@@ -21,7 +35,7 @@ public class LogicalProgramInArray {
                 if (sum == givenNUmber) {
                     int endPos = j + 1;
                     System.out.println(" Start Pos: " + ++startPos + " End Pos: " + ++endPos);
-                    arrayList.add(startPos+1);
+                    arrayList.add(startPos + 1);
                     arrayList.add(endPos);
                 }
             }
