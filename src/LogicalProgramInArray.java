@@ -125,4 +125,52 @@ public class LogicalProgramInArray {
         }
     }
 
+    void findSumOfTwoDigitSubArrayEqualsToGivenNumberBigO() {
+        // Input success case
+        int[] num = {1, 2, 4, 5, 8};
+        // Input failure case
+//        int[] num = {1, 2, 4, 5, 13};
+        int givenNumber = 12;
+        boolean isSumEquals = false;
+        Set<Integer> keySet = new HashSet<>();
+
+        for (int j : num) {
+            if (keySet.contains(j)) {
+                isSumEquals = true;
+                break;
+            } else {
+                keySet.add(givenNumber - j);
+            }
+        }
+
+        if (isSumEquals) {
+            System.out.println("Yes it found");
+        } else {
+            System.out.println("Not found");
+        }
+    }
+
+    void findSumOfTwoDigitSubArrayEqualsToGivenNumberBruitForce() {
+        int[] num = {1, 2, 4, 5, 8};
+        int givenNumber = 12;
+        boolean numberFound = false;
+        int firstPos = 0, secondPos = 0;
+        for (int i = 0; i < num.length; i++) {
+            for (int j = i + 1; j < num.length; j++) {
+                int sum = num[i] + num[j];
+                if (sum == givenNumber) {
+                    firstPos = i;
+                    secondPos = j;
+                    numberFound = true;
+                    break;
+                }
+            }
+        }
+
+        if (numberFound) {
+            System.out.println("Array position " + firstPos + " and " + secondPos + " is equals to " + givenNumber);
+        } else {
+            System.out.println("Not found");
+        }
+    }
 }
