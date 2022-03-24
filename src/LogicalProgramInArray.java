@@ -88,4 +88,25 @@ public class LogicalProgramInArray {
         }
     }
 
+    void checkItemIsInBothArray() {
+        String[] itemArrayOne = {"Apple", "Orange", "Banana", "Krishna"};
+        String[] itemArrayTwo = {"Arun", "Karthik", "Orange"};
+        boolean itemAvailableInBothArray = false;
+        String item = null;
+
+        for (String searchItem : itemArrayOne) {
+            for (String s : itemArrayTwo) {
+                if (searchItem.equalsIgnoreCase(s)) {
+                    itemAvailableInBothArray = true;
+                    item = searchItem;
+                    break;
+                }
+            }
+        }
+
+        if (itemAvailableInBothArray) {
+            System.out.println(item + " item found in both the array");
+        }
+    }
+
 }
