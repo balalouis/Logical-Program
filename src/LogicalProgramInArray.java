@@ -88,6 +88,22 @@ public class LogicalProgramInArray {
         }
     }
 
+    void checkItemIsInBothArrayBigO() {
+        String[] itemArrayOne = {"Apple", "Orange", "Banana", "Krishna", "Apple"};
+        String[] itemArrayTwo = {"Arun", "Karthik", "Orange"};
+
+        Set<String> set = new HashSet<>(Arrays.asList(itemArrayOne));
+
+        System.out.println("-----> " + Arrays.toString(set.toArray()));
+
+        for (String item : itemArrayTwo) {
+            if (set.contains(item)) {
+                System.out.println(item + ": item found");
+            }
+        }
+
+    }
+
     void checkItemIsInBothArray() {
         String[] itemArrayOne = {"Apple", "Orange", "Banana", "Krishna"};
         String[] itemArrayTwo = {"Arun", "Karthik", "Orange"};
