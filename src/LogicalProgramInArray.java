@@ -4,6 +4,45 @@ public class LogicalProgramInArray {
 
     static char[] characters = {'a', 'b', 'c', 'd'};
 
+    public void mergeSortedArray() {
+        int[] firstArray = {0, 3, 4, 32};
+        int[] secondArray = {4, 6, 30, 55, 65};
+        int[] mergedArray = new int[firstArray.length + secondArray.length];
+        int firstCurrPos = 0, secondCurrentPos = 0, mergedCurrentPos = 0;
+
+        while (firstCurrPos < firstArray.length && secondCurrentPos < secondArray.length) {
+            int firstValue = firstArray[firstCurrPos];
+            int secondValue = secondArray[secondCurrentPos];
+            if (firstValue < secondValue) {
+                mergedArray[mergedCurrentPos++] = firstValue;
+                firstCurrPos++;
+            } else {
+                mergedArray[mergedCurrentPos++] = secondValue;
+                secondCurrentPos++;
+            }
+        }
+
+        if (firstCurrPos >= firstArray.length) {
+            fillRemainingItemOfSecondArray(secondArray, mergedArray, secondCurrentPos, mergedCurrentPos);
+        } else {
+            fillRemainingItemOfSecondArray(firstArray, mergedArray, firstCurrPos, mergedCurrentPos);
+        }
+
+        System.out.println("----> " + Arrays.toString(mergedArray));
+    }
+
+    void fillRemainingItemOfFirstArray(int[] secondArray, int[] mergedArray, int secondCurrentPos, int mergedCurrentPos) {
+        while (secondCurrentPos < secondArray.length) {
+            mergedArray[mergedCurrentPos++] = secondArray[secondCurrentPos++];
+        }
+    }
+
+    void fillRemainingItemOfSecondArray(int[] firstArray, int[] mergedArray, int firstCurrPos, int mergedCurrentPos) {
+        while (firstCurrPos < firstArray.length) {
+            mergedArray[mergedCurrentPos++] = firstArray[firstCurrPos++];
+        }
+    }
+
     public void reverseString() {
         String word = "Hello world";
         StringBuilder stringBuilder = new StringBuilder(word);

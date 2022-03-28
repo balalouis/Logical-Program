@@ -19,7 +19,7 @@ public class LogicalProgram {
 
     private static void logicalPrograms() {
         LogicalProgramInArray logicalProgram = new LogicalProgramInArray();
-        logicalProgram.reverseString();
+        logicalProgram.mergeSortedArray();
     }
 
 }
