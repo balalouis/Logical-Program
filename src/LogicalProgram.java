@@ -1,11 +1,11 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-     myArray();
+        logicalPrograms();
     }
 
-    private static void myArray(){
-        MyArray myArray=new MyArray();
+    private static void myArray() {
+        MyArray myArray = new MyArray();
         myArray.printData();
 
         myArray.pushItem("A");
@@ -19,7 +19,7 @@ public class LogicalProgram {
 
     private static void logicalPrograms() {
         LogicalProgramInArray logicalProgram = new LogicalProgramInArray();
-        logicalProgram.findSumOfTwoDigitSubArrayEqualsToGivenNumberBigO();
+        logicalProgram.reverseString();
     }
 
 }

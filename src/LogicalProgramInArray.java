@@ -4,6 +4,19 @@ public class LogicalProgramInArray {
 
     static char[] characters = {'a', 'b', 'c', 'd'};
 
+    public void reverseString() {
+        String word = "Hello world";
+        StringBuilder stringBuilder = new StringBuilder(word);
+        System.out.println("After reverse: " + word);
+        for (int startPos = 0, endPos = stringBuilder.length() - 1; startPos < stringBuilder.length() / 2; startPos++, endPos--) {
+            char temp = stringBuilder.charAt(startPos);
+            stringBuilder.setCharAt(startPos, stringBuilder.charAt(endPos));
+            stringBuilder.setCharAt(endPos, temp);
+        }
+
+        System.out.println("After reverse: " + stringBuilder);
+    }
+
     public void findMaxRepeatedElementInArray() {
         char[] characters = {'a', 'c', 'b', 'c', 'd', 'b', 'a', 'b', 'b', 'b'};
         Hashtable<String, Integer> hashtable = new Hashtable<>();
