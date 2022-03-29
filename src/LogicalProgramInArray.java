@@ -4,6 +4,22 @@ public class LogicalProgramInArray {
 
     static char[] characters = {'a', 'b', 'c', 'd'};
 
+    public void moveZeros() {
+        int[] intArray = {0, 1, 0, 3, 12};
+
+        for (int i = 0; i < intArray.length - 1; i++) {
+            System.out.println("");
+            for (int j = i + 1; j < intArray.length; j++) {
+                if (intArray[i] == 0 && intArray[j] != 0) {
+                    intArray[i] = intArray[j];
+                    intArray[j] = 0;
+                    break;
+                }
+            }
+        }
+        System.out.println("-----> " + Arrays.toString(intArray));
+    }
+
     public void mergeSortedArray() {
         int[] firstArray = {0, 3, 4, 32};
         int[] secondArray = {4, 6, 30, 55, 65};
