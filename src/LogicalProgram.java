@@ -1,7 +1,7 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        logicalPrograms();
+        myHashMap();
     }
 
     private static void myArray() {
@@ -22,4 +22,11 @@ public class LogicalProgram {
         logicalProgram.moveZeros();
     }
 
+    private static void myHashMap() {
+        MyHashMap myHashMap = new MyHashMap(2);
+        myHashMap.setValue("Arun", "Salem");
+        myHashMap.setValue("Deva", "Salem");
+
+        myHashMap.getValue("Arun");
+    }
 }
