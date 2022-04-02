@@ -25,8 +25,22 @@ public class LogicalProgram {
     private static void myHashMap() {
         MyHashMap myHashMap = new MyHashMap(2);
         myHashMap.setValue("Arun", "Salem");
-        myHashMap.setValue("Deva", "Salem");
+        myHashMap.setValue("Deva", "Chennai");
+        myHashMap.setValue("Vivek", "Andhra");
 
-        myHashMap.getValue("Arun");
+        System.out.println("Value is : " + myHashMap.getValue("Vivek"));
+
+        myHashMap.printKeyList(myHashMap.getKeyList());
     }
+
+    private static void myHashMapJava() {
+        MyHashMapJava myHashMapJava = new MyHashMapJava(2);
+
+        myHashMapJava.setValue("Arun", "Salem");
+        myHashMapJava.setValue("Deva", "Chennai");
+        myHashMapJava.setValue("Vivek", "Andhra");
+
+        myHashMapJava.getValue("Vivek");
+    }
+
 }
