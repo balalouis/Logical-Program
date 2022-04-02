@@ -1,7 +1,7 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        logicalProgramInHashMap();
+        logicalProgramFromHackerathon();
     }
 
     private static void myArray() {
@@ -46,5 +46,11 @@ public class LogicalProgram {
     private static void logicalProgramInHashMap() {
         LogicalProgramInHashMap logicalProgramInHashMap = new LogicalProgramInHashMap();
         logicalProgramInHashMap.findFirstRepeatedItemsViaArray();
+    }
+
+    private static void logicalProgramFromHackerathon() {
+        HackerRank hackerRank = new HackerRank();
+        long lowCost = hackerRank.findMinCost();
+        System.out.println("Lower cost: " + lowCost);
     }
 }
