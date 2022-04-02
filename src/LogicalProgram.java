@@ -1,7 +1,7 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        myHashMap();
+        logicalProgramInHashMap();
     }
 
     private static void myArray() {
@@ -43,4 +43,8 @@ public class LogicalProgram {
         myHashMapJava.getValue("Vivek");
     }
 
+    private static void logicalProgramInHashMap() {
+        LogicalProgramInHashMap logicalProgramInHashMap = new LogicalProgramInHashMap();
+        logicalProgramInHashMap.findFirstRepeatedItemsViaArray();
+    }
 }
