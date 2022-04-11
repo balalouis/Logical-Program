@@ -1,7 +1,7 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        logicalProgramFromHackerathon();
+        myLinkedList();
     }
 
     private static void myArray() {
@@ -52,5 +52,15 @@ public class LogicalProgram {
         HackerRank hackerRank = new HackerRank();
         long lowCost = hackerRank.findMinCost();
         System.out.println("Lower cost: " + lowCost);
+    }
+
+    private static void myLinkedList() {
+        MyLinkList myLinkList = new MyLinkList(10);
+        myLinkList.append(7);
+        myLinkList.append(15);
+        myLinkList.append(23);
+        myLinkList.append(42);
+
+        myLinkList.deleteNodeByPosition(0);
     }
 }
