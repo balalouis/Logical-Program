@@ -1,7 +1,7 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        myLinkedList();
+        logicalPrograms();
     }
 
     private static void myArray() {
@@ -19,7 +19,7 @@ public class LogicalProgram {
 
     private static void logicalPrograms() {
         LogicalProgramInArray logicalProgram = new LogicalProgramInArray();
-        logicalProgram.moveZeros();
+        logicalProgram.findSumOfConsecutiveDigitIsEqualToGivenNUmber();
     }
 
     private static void myHashMap() {

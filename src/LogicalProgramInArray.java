@@ -112,7 +112,7 @@ public class LogicalProgramInArray {
     }
 
     public void findSumOfConsecutiveDigitIsEqualToGivenNUmber() {
-        int[] num = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] num = {1,2,3,7,5};
         int givenNUmber = 15;
         ArrayList<Integer> arrayList = new ArrayList<>();
         for (int i = 0; i < num.length - 1; i++) {
@@ -127,12 +127,13 @@ public class LogicalProgramInArray {
                 }
                 if (sum == givenNUmber) {
                     int endPos = j + 1;
-                    System.out.println(" Start Pos: " + ++startPos + " End Pos: " + ++endPos);
-                    arrayList.add(startPos + 1);
+                    System.out.println(" Start Pos: " + startPos + " End Pos: " + endPos);
+                    arrayList.add(startPos);
                     arrayList.add(endPos);
                 }
             }
         }
+        System.out.println("-----> "+Arrays.toString(arrayList.toArray()));
     }
 
     public static void printPairOfArrays(char[] characters) {
