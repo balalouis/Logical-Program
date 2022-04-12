@@ -1,9 +1,9 @@
-public class MyLinkList {
+public class MySingleLinkList {
     int size;
     Node head;
     Node tail;
 
-    MyLinkList(int value) {
+    MySingleLinkList(int value) {
         head = new Node(value);
         size++;
     }

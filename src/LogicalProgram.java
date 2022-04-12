@@ -55,12 +55,12 @@ public class LogicalProgram {
     }
 
     private static void myLinkedList() {
-        MyLinkList myLinkList = new MyLinkList(10);
-        myLinkList.append(7);
-        myLinkList.append(15);
-        myLinkList.append(23);
-        myLinkList.append(42);
+        MySingleLinkList mySingleLinkList = new MySingleLinkList(10);
+        mySingleLinkList.append(7);
+        mySingleLinkList.append(15);
+        mySingleLinkList.append(23);
+        mySingleLinkList.append(42);
 
-        myLinkList.deleteNodeByPosition(0);
+        mySingleLinkList.deleteNodeByPosition(0);
     }
 }
