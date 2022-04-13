@@ -1,5 +1,7 @@
 import java.util.*;
 
+import static java.lang.System.out;
+
 public class LogicalProgramInArray {
 
     static char[] characters = {'a', 'b', 'c', 'd'};
@@ -8,7 +10,7 @@ public class LogicalProgramInArray {
         int[] intArray = {0, 1, 0, 3, 12};
 
         for (int i = 0; i < intArray.length - 1; i++) {
-            System.out.println("");
+            out.println("");
             for (int j = i + 1; j < intArray.length; j++) {
                 if (intArray[i] == 0 && intArray[j] != 0) {
                     intArray[i] = intArray[j];
@@ -17,7 +19,7 @@ public class LogicalProgramInArray {
                 }
             }
         }
-        System.out.println("-----> " + Arrays.toString(intArray));
+        out.println("-----> " + Arrays.toString(intArray));
     }
 
     public void mergeSortedArray() {
@@ -44,7 +46,7 @@ public class LogicalProgramInArray {
             fillRemainingItemOfSecondArray(firstArray, mergedArray, firstCurrPos, mergedCurrentPos);
         }
 
-        System.out.println("----> " + Arrays.toString(mergedArray));
+        out.println("----> " + Arrays.toString(mergedArray));
     }
 
     void fillRemainingItemOfFirstArray(int[] secondArray, int[] mergedArray, int secondCurrentPos, int mergedCurrentPos) {
@@ -62,14 +64,14 @@ public class LogicalProgramInArray {
     public void reverseString() {
         String word = "Hello world";
         StringBuilder stringBuilder = new StringBuilder(word);
-        System.out.println("After reverse: " + word);
+        out.println("After reverse: " + word);
         for (int startPos = 0, endPos = stringBuilder.length() - 1; startPos < stringBuilder.length() / 2; startPos++, endPos--) {
             char temp = stringBuilder.charAt(startPos);
             stringBuilder.setCharAt(startPos, stringBuilder.charAt(endPos));
             stringBuilder.setCharAt(endPos, temp);
         }
 
-        System.out.println("After reverse: " + stringBuilder);
+        out.println("After reverse: " + stringBuilder);
     }
 
     public void findMaxRepeatedElementInArray() {
@@ -95,12 +97,12 @@ public class LogicalProgramInArray {
                 maxRepeatedKey = key;
             }
         }
-        System.out.println("Key: " + maxRepeatedKey + " Value is: " + hashtable.get(maxRepeatedKey));
+        out.println("Key: " + maxRepeatedKey + " Value is: " + hashtable.get(maxRepeatedKey));
     }
 
     public void reverseTheArray() {
         int[] num = {1, 2, 3, 4, 5, 6, 7};
-        System.out.println("Before: " + Arrays.toString(num));
+        out.println("Before: " + Arrays.toString(num));
         int halfOfTheArraySize = num.length / 2;
         int temp = 0;
         for (int front = 0, back = num.length - 1; front < halfOfTheArraySize; front++, back--) {
@@ -108,7 +110,7 @@ public class LogicalProgramInArray {
             num[front] = num[back];
             num[back] = temp;
         }
-        System.out.println("After: " + Arrays.toString(num));
+        out.println("After: " + Arrays.toString(num));
     }
 
     public void findSumOfConsecutiveDigitIsEqualToGivenNUmber() {
@@ -127,23 +129,23 @@ public class LogicalProgramInArray {
                 }
                 if (sum == givenNUmber) {
                     int endPos = j + 1;
-                    System.out.println(" Start Pos: " + startPos + " End Pos: " + endPos);
+                    out.println(" Start Pos: " + startPos + " End Pos: " + endPos);
                     arrayList.add(startPos);
                     arrayList.add(endPos);
                 }
             }
         }
-        System.out.println("-----> "+Arrays.toString(arrayList.toArray()));
+        out.println("-----> "+Arrays.toString(arrayList.toArray()));
     }
 
     public static void printPairOfArrays(char[] characters) {
         for (int i = 0; i < characters.length; i++) {
             for (int j = 0; j < characters.length; j++) {
                 if (i != j) {
-                    System.out.println(characters[i] + "," + characters[j]);
+                    out.println(characters[i] + "," + characters[j]);
                 }
             }
-            System.out.println();
+            out.println();
         }
     }
 
@@ -151,9 +153,9 @@ public class LogicalProgramInArray {
         for (int k : num) {
             for (int i : num) {
                 int sum = k + i;
-                System.out.print(sum + ", ");
+                out.print(sum + ", ");
             }
-            System.out.println();
+            out.println();
         }
     }
 
@@ -163,11 +165,11 @@ public class LogicalProgramInArray {
 
         Set<String> set = new HashSet<>(Arrays.asList(itemArrayOne));
 
-        System.out.println("-----> " + Arrays.toString(set.toArray()));
+        out.println("-----> " + Arrays.toString(set.toArray()));
 
         for (String item : itemArrayTwo) {
             if (set.contains(item)) {
-                System.out.println(item + ": item found");
+                out.println(item + ": item found");
             }
         }
 
@@ -190,7 +192,7 @@ public class LogicalProgramInArray {
         }
 
         if (itemAvailableInBothArray) {
-            System.out.println(item + " item found in both the array");
+            out.println(item + " item found in both the array");
         }
     }
 
@@ -213,9 +215,9 @@ public class LogicalProgramInArray {
         }
 
         if (isSumEquals) {
-            System.out.println("Yes it found");
+            out.println("Yes it found");
         } else {
-            System.out.println("Not found");
+            out.println("Not found");
         }
     }
 
@@ -237,9 +239,9 @@ public class LogicalProgramInArray {
         }
 
         if (numberFound) {
-            System.out.println("Array position " + firstPos + " and " + secondPos + " is equals to " + givenNumber);
+            out.println("Array position " + firstPos + " and " + secondPos + " is equals to " + givenNumber);
         } else {
-            System.out.println("Not found");
+            out.println("Not found");
         }
     }
 }

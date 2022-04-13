@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import static java.lang.System.out;
+
 public class LogicalProgramInHashMap {
 
     public void findFirstRepeatedItemsViaHashmap() {
@@ -8,12 +10,12 @@ public class LogicalProgramInHashMap {
 
         for (int i : numArray) {
             if (al.contains(String.valueOf(i))) {
-                System.out.println("First repeated item is: " + i);
+                out.println("First repeated item is: " + i);
                 break;
             } else {
                 al.add(String.valueOf(i));
             }
-            System.out.println("-----> " + al);
+            out.println("-----> " + al);
         }
     }
 
@@ -25,7 +27,7 @@ public class LogicalProgramInHashMap {
             for (int j = 0; j < charArray.length - 1; j++) {
                 if (jumpPos + j < charArray.length) {
                     if (charArray[j] == charArray[j + jumpPos]) {
-                        System.out.println("-----> Item seen: " + charArray[j]);
+                        out.println("-----> Item seen: " + charArray[j]);
                         repeatedItemSeen = true;
                         break;
                     }

@@ -1,7 +1,7 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        logicalPrograms();
+        myDoubleLinkedList();
     }
 
     private static void myArray() {
@@ -54,7 +54,7 @@ public class LogicalProgram {
         System.out.println("Lower cost: " + lowCost);
     }
 
-    private static void myLinkedList() {
+    private static void mySingleLinkList() {
         MySingleLinkList mySingleLinkList = new MySingleLinkList(10);
         mySingleLinkList.append(7);
         mySingleLinkList.append(15);
@@ -62,5 +62,18 @@ public class LogicalProgram {
         mySingleLinkList.append(42);
 
         mySingleLinkList.deleteNodeByPosition(0);
+    }
+
+    private static void myDoubleLinkedList() {
+        DoubleLinkedList doubleLinkedList = new DoubleLinkedList(2);
+        doubleLinkedList.append(4);
+        doubleLinkedList.append(6);
+        doubleLinkedList.append(8);
+
+        doubleLinkedList.delete(0);
+        doubleLinkedList.delete(0);
+        doubleLinkedList.delete(0);
+        doubleLinkedList.delete(0);
+        doubleLinkedList.delete(0);
     }
 }
