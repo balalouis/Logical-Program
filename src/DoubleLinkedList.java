@@ -123,5 +123,20 @@ public class DoubleLinkedList {
             }
         }
     }
+
+    public void reverse() {
+        out.println();
+        if (size == 0) {
+            out.println("There is no item in list");
+        } else if (size == 1) {
+            out.println(head.value);
+        } else {
+            Node currentNode = tail;
+            while (currentNode != null) {
+                out.println(currentNode.value);
+                currentNode = currentNode.prev;
+            }
+        }
+    }
 }
 

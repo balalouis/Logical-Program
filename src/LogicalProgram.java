@@ -70,10 +70,6 @@ public class LogicalProgram {
         doubleLinkedList.append(6);
         doubleLinkedList.append(8);
 
-        doubleLinkedList.delete(0);
-        doubleLinkedList.delete(0);
-        doubleLinkedList.delete(0);
-        doubleLinkedList.delete(0);
-        doubleLinkedList.delete(0);
+        doubleLinkedList.reverse();
     }
 }
