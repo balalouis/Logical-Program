@@ -1,7 +1,7 @@
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        myDoubleLinkedList();
+        myStack();
     }
 
     private static void myArray() {
@@ -71,5 +71,18 @@ public class LogicalProgram {
         doubleLinkedList.append(8);
 
         doubleLinkedList.reverse();
+    }
+
+    private static void myStack() {
+        MyStack myStack = new MyStack(1);
+        myStack.push(2);
+        myStack.push(3);
+        myStack.push(4);
+
+        myStack.pop();
+        myStack.pop();
+        myStack.push(6);
+        myStack.push(8);
+        myStack.peek();
     }
 }
