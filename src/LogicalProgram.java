@@ -1,7 +1,9 @@
+import company.PicsArt;
+
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        myStack();
+        company();
     }
 
     private static void myArray() {
@@ -84,5 +86,10 @@ public class LogicalProgram {
         myStack.push(6);
         myStack.push(8);
         myStack.peek();
+    }
+
+    private static void company() {
+        PicsArt picsArt=new PicsArt();
+        picsArt.programTwo("abbaaaac");
     }
 }
