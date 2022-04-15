@@ -6,6 +6,7 @@ import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJava;
 import linkedlist.DoubleLinkedList;
 import linkedlist.MySingleLinkList;
+import queue.MyQueueViaArray;
 import queue.MyQueueViaLinkedList;
 import stack.MyStackViaArray;
 import stack.MyStackViaLinkedList;
@@ -13,7 +14,7 @@ import stack.MyStackViaLinkedList;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        myQueueViaLinkedList();
+        myQueueViaArray();
     }
 
     private static void myArray() {
@@ -119,6 +120,18 @@ public class LogicalProgram {
         myQueueViaLinkedList.push(12);
         myQueueViaLinkedList.pop();
         myQueueViaLinkedList.peak();
+    }
+
+    private static void myQueueViaArray() {
+        MyQueueViaArray myQueueViaArray = new MyQueueViaArray(4);
+        myQueueViaArray.enQueue(2);
+        myQueueViaArray.enQueue(4);
+
+        myQueueViaArray.deQueue();
+        myQueueViaArray.enQueue(6);
+        myQueueViaArray.enQueue(8);
+        myQueueViaArray.enQueue(10);
+        myQueueViaArray.enQueue(12);
     }
 
     private static void company() {
