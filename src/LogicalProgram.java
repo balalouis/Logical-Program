@@ -3,7 +3,7 @@ import company.PicsArt;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        company();
+        myStackViaArray();
     }
 
     private static void myArray() {
@@ -75,21 +75,31 @@ public class LogicalProgram {
         doubleLinkedList.reverse();
     }
 
-    private static void myStack() {
-        MyStack myStack = new MyStack(1);
-        myStack.push(2);
-        myStack.push(3);
-        myStack.push(4);
+    private static void myStackViaLinkedList() {
+        MyStackViaLinklist myStackViaLinklist = new MyStackViaLinklist(1);
+        myStackViaLinklist.push(2);
+        myStackViaLinklist.push(3);
+        myStackViaLinklist.push(4);
 
-        myStack.pop();
-        myStack.pop();
-        myStack.push(6);
-        myStack.push(8);
-        myStack.peek();
+        myStackViaLinklist.pop();
+        myStackViaLinklist.pop();
+        myStackViaLinklist.push(6);
+        myStackViaLinklist.push(8);
+        myStackViaLinklist.peek();
+    }
+
+    private static void myStackViaArray() {
+        MyStackViaArray myStackViaArray = new MyStackViaArray(4);
+        myStackViaArray.push(100);
+        myStackViaArray.push(200);
+        myStackViaArray.push(300);
+        myStackViaArray.pop();
+        myStackViaArray.push(500);
+        myStackViaArray.push(600);
     }
 
     private static void company() {
-        PicsArt picsArt=new PicsArt();
+        PicsArt picsArt = new PicsArt();
         picsArt.programTwo("abbaaaac");
     }
 }

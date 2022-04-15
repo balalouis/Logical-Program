@@ -1,12 +1,12 @@
 import static java.lang.System.out;
 
-public class MyStack {
+public class MyStackViaLinklist {
 
     Node top;
     Node bottom;
     int size;
 
-    MyStack(int value) {
+    MyStackViaLinklist(int value) {
         Node newNode = new Node(value);
         top = newNode;
         bottom = newNode;
