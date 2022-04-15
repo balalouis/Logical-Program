@@ -1,3 +1,5 @@
+package linkedlist;
+
 import static java.lang.System.out;
 
 public class DoubleLinkedList {
@@ -5,7 +7,7 @@ public class DoubleLinkedList {
     Node tail;
     int size;
 
-    DoubleLinkedList(int value) {
+    public DoubleLinkedList(int value) {
         head = new Node(value);
         tail = head;
         size = 1;

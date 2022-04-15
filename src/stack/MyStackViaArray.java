@@ -1,3 +1,5 @@
+package stack;
+
 import java.util.Arrays;
 
 import static java.lang.System.out;
@@ -8,7 +10,7 @@ public class MyStackViaArray {
     private int top;
     private int size;
 
-    MyStackViaArray(int size) {
+    public MyStackViaArray(int size) {
         this.size = size;
         myArray = new int[size];
         top = -1;

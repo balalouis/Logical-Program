@@ -1,3 +1,5 @@
+package array;
+
 import java.util.ArrayList;
 
 public class MyArray {
@@ -5,12 +7,12 @@ public class MyArray {
     String[] data;
     int length;
 
-    MyArray() {
+    public MyArray() {
         data = new String[10];
         length = 0;
     }
 
-    void printData() {
+    public void printData() {
         if (length > 0) {
             for (int i = 0; i < length; i++) {
                 System.out.println(data[i]);
@@ -20,12 +22,12 @@ public class MyArray {
         }
     }
 
-    void pushItem(String item) {
+    public void pushItem(String item) {
         data[length] = item;
         length++;
     }
 
-    void popItem() {
+    public void popItem() {
         if (length > 0) {
             String item = data[length - 1];
             data[length] = null;
@@ -36,7 +38,7 @@ public class MyArray {
         }
     }
 
-    void insertItem(int indexPos, String item) {
+    public void insertItem(int indexPos, String item) {
         if (length == 0) {
             pushItem(item);
         } else {
@@ -44,7 +46,7 @@ public class MyArray {
         }
     }
 
-    void shiftsToRight(int indexPos, String item) {
+    public void shiftsToRight(int indexPos, String item) {
         for (int i = length - 1; i >= indexPos; i--) {
             data[i + 1] = data[i];
         }
@@ -53,7 +55,7 @@ public class MyArray {
         printData();
     }
 
-    void delete(int indexPos) {
+    public void delete(int indexPos) {
         if (length == 0) {
             System.out.println("Empty array");
         } else {
@@ -61,7 +63,7 @@ public class MyArray {
         }
     }
 
-    void shiftsToLeft(int indexPos) {
+    public void shiftsToLeft(int indexPos) {
         for (int i = indexPos; i < length - 1; i++) {
             data[i] = data[i + 1];
         }

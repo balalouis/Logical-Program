@@ -1,9 +1,11 @@
+package linkedlist;
+
 public class MySingleLinkList {
     int size;
     Node head;
     Node tail;
 
-    MySingleLinkList(int value) {
+    public MySingleLinkList(int value) {
         head = new Node(value);
         size++;
     }

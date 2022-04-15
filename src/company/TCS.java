@@ -1,8 +1,10 @@
+package company;
+
 import java.util.*;
 
-public class HackerRank {
+public class TCS {
 
-    long findMinCost() {
+    public long findMinCost() {
 
         ArrayList<String> projectIdList = new ArrayList<>();
         projectIdList.add("2");

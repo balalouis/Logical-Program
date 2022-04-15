@@ -1,3 +1,4 @@
+package leetcode;
 
 public class LeetCodeEasy {
     public boolean isPalindrome(int x) {

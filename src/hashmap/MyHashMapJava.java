@@ -1,3 +1,5 @@
+package hashmap;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -5,7 +7,7 @@ public class MyHashMapJava {
     int size = 0;
     ArrayList[] myArrays;
 
-    MyHashMapJava(int size) {
+    public MyHashMapJava(int size) {
         this.size = size;
         myArrays = new ArrayList[size];
     }
@@ -16,7 +18,7 @@ public class MyHashMapJava {
         }
     }
 
-    void getValue(String key) {
+    public void getValue(String key) {
         int address = getHashCode(key);
         System.out.println("Address:" + address);
         ArrayList arrayList = myArrays[address];
@@ -27,15 +29,15 @@ public class MyHashMapJava {
         System.out.println("" + value);
     }
 
-    void setDummy(String key, String value) {
-        int address = getHashCode(key);
-        MyObject[] myObjects = new MyObject[20];
-        if (myObjects[address] == null) {
-            myObjects[address] = new MyObject(key, value);
-        }
-    }
+//    void setDummy(String key, String value) {
+//        int address = getHashCode(key);
+//        MyObject[] myObjects = new MyObject[20];
+//        if (myObjects[address] == null) {
+//            myObjects[address] = new MyObject(key, value);
+//        }
+//    }
 
-    void setValue(String key, String value) {
+    public void setValue(String key, String value) {
         int address = getHashCode(key);
         if (myArrays[address] == null) {
             myArrays[address] = new ArrayList<String>();
@@ -44,7 +46,7 @@ public class MyHashMapJava {
         System.out.println("" + Arrays.toString(myArrays));
     }
 
-    Integer getHashCode(String key) {
+    public Integer getHashCode(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
             hash = (hash + key.charAt(i) * i) % this.myArrays.length;

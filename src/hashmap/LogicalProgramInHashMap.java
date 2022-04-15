@@ -1,3 +1,5 @@
+package hashmap;
+
 import java.util.ArrayList;
 
 import static java.lang.System.out;

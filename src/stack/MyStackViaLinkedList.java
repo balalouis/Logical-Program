@@ -1,19 +1,21 @@
+package stack;
+
 import static java.lang.System.out;
 
-public class MyStackViaLinklist {
+public class MyStackViaLinkedList {
 
     Node top;
     Node bottom;
     int size;
 
-    MyStackViaLinklist(int value) {
+    public MyStackViaLinkedList(int value) {
         Node newNode = new Node(value);
         top = newNode;
         bottom = newNode;
         size = 1;
     }
 
-    void push(int value) {
+    public void push(int value) {
         Node newNode = new Node(value);
         newNode.next = top;
         top = newNode;
@@ -21,7 +23,7 @@ public class MyStackViaLinklist {
         printStackEntry();
     }
 
-    void pop() {
+    public void pop() {
         out.println();
         if (size == 0) {
             out.println("There is no item in stack");
@@ -43,7 +45,7 @@ public class MyStackViaLinklist {
         out.println("Item popped from stack: -> " + value);
     }
 
-    void peek() {
+    public void peek() {
         out.println();
         if (size == 0) {
             out.println("There is no iem is stack");

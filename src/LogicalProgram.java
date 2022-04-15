@@ -1,4 +1,13 @@
+import array.LogicalProgramInArray;
+import array.MyArray;
 import company.PicsArt;
+import company.TCS;
+import hashmap.LogicalProgramInHashMap;
+import hashmap.MyHashMapJava;
+import linkedlist.DoubleLinkedList;
+import linkedlist.MySingleLinkList;
+import stack.MyStackViaArray;
+import stack.MyStackViaLinkedList;
 
 public class LogicalProgram {
 
@@ -51,8 +60,8 @@ public class LogicalProgram {
     }
 
     private static void logicalProgramFromHackerathon() {
-        HackerRank hackerRank = new HackerRank();
-        long lowCost = hackerRank.findMinCost();
+        TCS TCS = new TCS();
+        long lowCost = TCS.findMinCost();
         System.out.println("Lower cost: " + lowCost);
     }
 
@@ -76,16 +85,16 @@ public class LogicalProgram {
     }
 
     private static void myStackViaLinkedList() {
-        MyStackViaLinklist myStackViaLinklist = new MyStackViaLinklist(1);
-        myStackViaLinklist.push(2);
-        myStackViaLinklist.push(3);
-        myStackViaLinklist.push(4);
+        MyStackViaLinkedList myStackViaLinkedList = new MyStackViaLinkedList(1);
+        myStackViaLinkedList.push(2);
+        myStackViaLinkedList.push(3);
+        myStackViaLinkedList.push(4);
 
-        myStackViaLinklist.pop();
-        myStackViaLinklist.pop();
-        myStackViaLinklist.push(6);
-        myStackViaLinklist.push(8);
-        myStackViaLinklist.peek();
+        myStackViaLinkedList.pop();
+        myStackViaLinkedList.pop();
+        myStackViaLinkedList.push(6);
+        myStackViaLinkedList.push(8);
+        myStackViaLinkedList.peek();
     }
 
     private static void myStackViaArray() {
