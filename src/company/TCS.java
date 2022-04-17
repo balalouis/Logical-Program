@@ -4,6 +4,13 @@ import java.util.*;
 
 public class TCS {
 
+    /*
+        Find min cost of the projects
+        Ex: Projects -> 2, 0, 1, 2, 1
+            Bidding  -> 7, 4, 6, 8, 2
+
+            Min bidding : 0 -> 4, 1 -> 2, 2 -> 7 : Total - 13[4+2+7]
+     */
     public long findMinCost() {
 
         ArrayList<String> projectIdList = new ArrayList<>();

@@ -11,10 +11,12 @@ import queue.MyQueueViaLinkedList;
 import stack.MyStackViaArray;
 import stack.MyStackViaLinkedList;
 
+import static java.lang.System.out;
+
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        myQueueViaArray();
+        tcs();
     }
 
     private static void myArray() {
@@ -41,7 +43,7 @@ public class LogicalProgram {
         myHashMap.setValue("Deva", "Chennai");
         myHashMap.setValue("Vivek", "Andhra");
 
-        System.out.println("Value is : " + myHashMap.getValue("Vivek"));
+        out.println("Value is : " + myHashMap.getValue("Vivek"));
 
         myHashMap.printKeyList(myHashMap.getKeyList());
     }
@@ -64,7 +66,7 @@ public class LogicalProgram {
     private static void logicalProgramFromHackerathon() {
         TCS TCS = new TCS();
         long lowCost = TCS.findMinCost();
-        System.out.println("Lower cost: " + lowCost);
+        out.println("Lower cost: " + lowCost);
     }
 
     private static void mySingleLinkList() {
@@ -134,7 +136,12 @@ public class LogicalProgram {
         myQueueViaArray.enQueue(12);
     }
 
-    private static void company() {
+    private static void tcs() {
+        TCS tcs = new TCS();
+        out.println("Min cost :" + tcs.findMinCost());
+    }
+
+    private static void picsArt() {
         PicsArt picsArt = new PicsArt();
         picsArt.programTwo("abbaaaac");
     }
