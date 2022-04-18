@@ -16,7 +16,7 @@ import static java.lang.System.out;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        tcs();
+        picsArt();
     }
 
     private static void myArray() {
@@ -143,6 +143,7 @@ public class LogicalProgram {
 
     private static void picsArt() {
         PicsArt picsArt = new PicsArt();
-        picsArt.programTwo("abbaaaac");
+//        picsArt.programTwo("abbaaaac");
+        picsArt.programOne();
     }
 }
