@@ -17,7 +17,7 @@ import static java.lang.System.out;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        tree();
+        picsArt();
     }
 
     private static void myArray() {

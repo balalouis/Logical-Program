@@ -13,7 +13,7 @@ class PicsArt {
         2, 4, is repeated for two times
      */
     fun programOne() {
-        val numArray = arrayOf(21, 243, 45, 6)
+        val numArray = arrayOf(21, 341, 41, 4)
         val numHashMap = mutableMapOf<Int, Int>()
         for (digit in numArray) {
             splitAndInsertIntoMap(digit, numHashMap as HashMap<Int, Int>)
@@ -38,17 +38,20 @@ class PicsArt {
     }
 
     private fun maxRepeatedItem(numHashMap: HashMap<Int, Int> /* = java.util.HashMap<kotlin.Int, kotlin.Int> */) {
-        val numList = mutableListOf<Int>()
+        val maxRepeatedItem = mutableMapOf<Int, Int>()
         var maxValue = 0
+        var maxKey = 0
         for ((k, v) in numHashMap) {
-            if (v > maxValue) {
-                println("$k = $v")
-                numList.clear()
-                numList.add(k)
+            println("$k = $v")
+            if (v == maxValue) {
+                maxRepeatedItem[k] = v
+            } else if (v > maxValue) {
+                maxRepeatedItem.clear()
+                maxRepeatedItem[k] = v
                 maxValue = v
             }
         }
-        out.println(numList.toString())
+        out.println(maxRepeatedItem.toString())
 
     }
 
