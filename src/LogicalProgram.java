@@ -10,13 +10,14 @@ import queue.MyQueueViaArray;
 import queue.MyQueueViaLinkedList;
 import stack.MyStackViaArray;
 import stack.MyStackViaLinkedList;
+import tree.MyTree;
 
 import static java.lang.System.out;
 
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        picsArt();
+        tree();
     }
 
     private static void myArray() {
@@ -145,5 +146,19 @@ public class LogicalProgram {
         PicsArt picsArt = new PicsArt();
 //        picsArt.programTwo("abbaaaac");
         picsArt.programOne();
+    }
+
+    private static void tree() {
+        MyTree myTree = new MyTree(9);
+        myTree.insert(4);
+        myTree.insert(6);
+        myTree.insert(20);
+        myTree.insert(70);
+        myTree.insert(15);
+        myTree.insert(2);
+
+        myTree.printNodes(myTree.root);
+        out.println();
+        myTree.search(15, myTree.root);
     }
 }
