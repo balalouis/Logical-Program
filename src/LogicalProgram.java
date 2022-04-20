@@ -1,5 +1,6 @@
 import array.LogicalProgramInArray;
 import array.MyArray;
+import company.Litmus;
 import company.PicsArt;
 import company.TCS;
 import hashmap.LogicalProgramInHashMap;
@@ -17,7 +18,7 @@ import static java.lang.System.out;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        picsArt();
+        litmus();
     }
 
     private static void myArray() {
@@ -149,16 +150,28 @@ public class LogicalProgram {
     }
 
     private static void tree() {
-        MyTree myTree = new MyTree(9);
-        myTree.insert(4);
-        myTree.insert(6);
-        myTree.insert(20);
-        myTree.insert(70);
+        MyTree myTree = new MyTree(22);
         myTree.insert(15);
-        myTree.insert(2);
+        myTree.insert(30);
+        myTree.insert(24);
+        myTree.insert(36);
+        myTree.insert(34);
+        myTree.insert(26);
 
         myTree.printNodes(myTree.root);
         out.println();
-        myTree.search(15, myTree.root);
+        myTree.remove(30, myTree.root, null, false);
+        out.println();
+        myTree.printNodes(myTree.root);
+    }
+
+    private static void dbs() {
+        DBS dbs = new DBS();
+        dbs.getUniqueCharacterCount();
+    }
+
+    private static void litmus() {
+        Litmus litmus = new Litmus();
+        litmus.findArmstrongNumber();
     }
 }
