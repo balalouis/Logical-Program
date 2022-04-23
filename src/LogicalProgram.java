@@ -3,6 +3,7 @@ import array.MyArray;
 import company.Litmus;
 import company.PicsArt;
 import company.TCS;
+import graph.Graph;
 import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJava;
 import linkedlist.DoubleLinkedList;
@@ -18,7 +19,7 @@ import static java.lang.System.out;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        litmus();
+        graph();
     }
 
     private static void myArray() {
@@ -173,5 +174,27 @@ public class LogicalProgram {
     private static void litmus() {
         Litmus litmus = new Litmus();
         litmus.findArmstrongNumber();
+    }
+
+    private static void graph() {
+        Graph graph = new Graph();
+        graph.addVertex(0);
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addVertex(4);
+        graph.addVertex(5);
+        graph.addVertex(6);
+
+        graph.addEdge(3, 1);
+        graph.addEdge(3, 4);
+        graph.addEdge(4, 2);
+        graph.addEdge(4, 5);
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 0);
+        graph.addEdge(0, 2);
+        graph.addEdge(6, 5);
+
+        graph.showConnectionOfVertex();
     }
 }
