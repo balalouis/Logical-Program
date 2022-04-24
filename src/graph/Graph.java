@@ -11,29 +11,12 @@ public class Graph {
     private final HashMap<Integer, ArrayList<Integer>> edgeMap = new HashMap<>();
 
     public void addVertex(int value) {
-        vertexList.add(value);
+        edgeMap.put(value, new ArrayList<>());
     }
 
     public void addEdge(int vertexOne, int vertexTwo) {
-        ArrayList<Integer> alOne;
-        if (edgeMap.containsKey(vertexOne)) {
-            alOne = edgeMap.get(vertexOne);
-            alOne.add(vertexTwo);
-        } else {
-            alOne = new ArrayList<>();
-            alOne.add(vertexTwo);
-        }
-        edgeMap.put(vertexOne, alOne);
-
-        ArrayList<Integer> alTwo;
-        if (edgeMap.containsKey(vertexTwo)) {
-            alTwo = edgeMap.get(vertexTwo);
-            alTwo.add(vertexOne);
-        } else {
-            alTwo = new ArrayList<>();
-            alTwo.add(vertexOne);
-        }
-        edgeMap.put(vertexTwo, alTwo);
+        edgeMap.get(vertexOne).add(vertexTwo);
+        edgeMap.get(vertexTwo).add(vertexOne);
     }
 
     public void showConnectionOfVertex() {
