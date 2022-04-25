@@ -6,6 +6,7 @@ import company.TCS;
 import graph.Graph;
 import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJava;
+import leetcode.LeetCodeMedium;
 import linkedlist.DoubleLinkedList;
 import linkedlist.MySingleLinkList;
 import queue.MyQueueViaArray;
@@ -19,7 +20,7 @@ import static java.lang.System.out;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        graph();
+        leetCode();
     }
 
     private static void myArray() {
@@ -196,5 +197,11 @@ public class LogicalProgram {
         graph.addEdge(6, 5);
 
         graph.showConnectionOfVertex();
+    }
+
+    private static void leetCode() {
+        LeetCodeMedium leetCodeMedium = new LeetCodeMedium();
+        int longString = leetCodeMedium.lengthOfLongestSubstring("aab");
+        out.println("Longest string: " + longString);
     }
 }
