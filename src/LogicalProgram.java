@@ -26,7 +26,7 @@ public class LogicalProgram {
 
     private static void recursive() {
         Factorial factorial = new Factorial();
-        int fact = factorial.findFactorial(6, 6);
+        int fact = factorial.findFactorialViaLoop(6, 6);
         out.println("Fact : " + fact);
     }
 
