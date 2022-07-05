@@ -14,30 +14,30 @@ public class LeetCodeMedium {
     public int lengthOfLongestSubstring(String s) {
         char[] charValue = s.toCharArray();
         HashMap<String, Integer> hashMap = new HashMap<>();
-        if (s.isEmpty()) {
-            return 0;
-        } else if (s.isBlank() || s.length() == 1) {
-            return 1;
-        }
-        for (int i = 0; i < charValue.length; i++) {
-            ArrayList<String> arrayList = new ArrayList<>();
-            for (int j = i; j < charValue.length; j++) {
-                char c = charValue[j];
-                if (arrayList.contains(String.valueOf(c))) {
-                    break;
-                } else {
-                    arrayList.add(String.valueOf(c));
-                }
-            }
-            if (arrayList.size() == charValue.length) {
-                String key = convertListToString(arrayList);
-                hashMap.put(key, key.length());
-                break;
-            } else {
-                String key = convertListToString(arrayList);
-                hashMap.put(key, key.length());
-            }
-        }
+//        if (s.isEmpty()) {
+//            return 0;
+//        } else if (s.isBlank() || s.length() == 1) {
+//            return 1;
+//        }
+//        for (int i = 0; i < charValue.length; i++) {
+//            ArrayList<String> arrayList = new ArrayList<>();
+//            for (int j = i; j < charValue.length; j++) {
+//                char c = charValue[j];
+//                if (arrayList.contains(String.valueOf(c))) {
+//                    break;
+//                } else {
+//                    arrayList.add(String.valueOf(c));
+//                }
+//            }
+//            if (arrayList.size() == charValue.length) {
+//                String key = convertListToString(arrayList);
+//                hashMap.put(key, key.length());
+//                break;
+//            } else {
+//                String key = convertListToString(arrayList);
+//                hashMap.put(key, key.length());
+//            }
+//        }
         return findMaxSubString(hashMap);
     }
 

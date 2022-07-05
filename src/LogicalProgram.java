@@ -11,6 +11,7 @@ import linkedlist.DoubleLinkedList;
 import linkedlist.MySingleLinkList;
 import queue.MyQueueViaArray;
 import queue.MyQueueViaLinkedList;
+import recursive.Factorial;
 import stack.MyStackViaArray;
 import stack.MyStackViaLinkedList;
 import tree.MyTree;
@@ -20,7 +21,13 @@ import static java.lang.System.out;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        leetCode();
+        recursive();
+    }
+
+    private static void recursive() {
+        Factorial factorial = new Factorial();
+        int fact = factorial.findFactorial(6, 6);
+        out.println("Fact : " + fact);
     }
 
     private static void myArray() {
