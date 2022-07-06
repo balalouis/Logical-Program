@@ -12,6 +12,7 @@ import linkedlist.MySingleLinkList;
 import queue.MyQueueViaArray;
 import queue.MyQueueViaLinkedList;
 import recursive.Factorial;
+import recursive.Fibonacci;
 import stack.MyStackViaArray;
 import stack.MyStackViaLinkedList;
 import tree.MyTree;
@@ -21,10 +22,16 @@ import static java.lang.System.out;
 public class LogicalProgram {
 
     public static void main(String[] args) {
-        recursive();
+        fibonacci();
     }
 
-    private static void recursive() {
+    private static void fibonacci() {
+        Fibonacci fibonacci = new Fibonacci();
+        int fib = fibonacci.findFibonacciViaRecursive(0, 1, 8);
+        out.println("Fibo: " + fib);
+    }
+
+    private static void factorial() {
         Factorial factorial = new Factorial();
         int fact = factorial.findFactorialViaLoop(6, 6);
         out.println("Fact : " + fact);
