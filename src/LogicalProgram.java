@@ -21,8 +21,40 @@ import static java.lang.System.out;
 
 public class LogicalProgram {
 
+    private static String palindromeText = "";
+
     public static void main(String[] args) {
-        fibonacci();
+        traverseString();
+    }
+
+    private static void traverseString() {
+        String fullString = "banana";
+
+        for (int i = 0; i < fullString.length(); i++) {
+            for (int j = fullString.length(); j > i; j--) {
+                String sub = fullString.substring(i, j);
+                if (sub.length() > 2) {
+                    out.println(sub);
+                    isPalindrome(sub);
+                }
+            }
+            out.println("-------");
+        }
+        out.println("Palindrome :" + palindromeText);
+    }
+
+    private static void isPalindrome(String text) {
+        char[] textArray = text.toCharArray();
+        boolean isPalindrome = true;
+        for (int i = 0, j = text.length() - 1; i < text.length(); i++, j--) {
+            if (textArray[i] != textArray[j]) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        if (isPalindrome && text.length() > palindromeText.length()) {
+            palindromeText = text;
+        }
     }
 
     private static void fibonacci() {
