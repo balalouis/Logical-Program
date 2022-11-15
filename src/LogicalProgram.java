@@ -19,21 +19,24 @@ import tree.MyTree;
 
 import static java.lang.System.out;
 
+import java.util.Arrays;
+
 public class LogicalProgram {
 
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        traverseString();
+        int[] num = {2, 4, 6, 8, 10, 12};
+        reverseArray(num);
     }
 
     private static void traverseString() {
-        String fullString = "banana";
+        String fullString = "cbbd";
 
         for (int i = 0; i < fullString.length(); i++) {
             for (int j = fullString.length(); j > i; j--) {
                 String sub = fullString.substring(i, j);
-                if (sub.length() > 2) {
+                if (sub.length() > 1) {
                     out.println(sub);
                     isPalindrome(sub);
                 }
@@ -41,6 +44,16 @@ public class LogicalProgram {
             out.println("-------");
         }
         out.println("Palindrome :" + palindromeText);
+    }
+
+    private static void reverseArray(int[] num) {
+        out.println("Before: " + Arrays.toString(num));
+        for (int startPos = 0, endPos = num.length - 1; startPos < num.length / 2; startPos++, endPos--) {
+            int temp = num[endPos];
+            num[endPos] = num[startPos];
+            num[startPos] = temp;
+        }
+        out.println("After: " + Arrays.toString(num));
     }
 
     private static void isPalindrome(String text) {
@@ -249,5 +262,21 @@ public class LogicalProgram {
         LeetCodeMedium leetCodeMedium = new LeetCodeMedium();
         int longString = leetCodeMedium.lengthOfLongestSubstring("aab");
         out.println("Longest string: " + longString);
+    }
+
+    private static void findMaxAndMin() {
+        int[] numArray = {3, 2, 1, 56, 10000, 167};
+        int max = numArray[0];
+        int min = numArray[0];
+        for (int i = 1; i < numArray.length - 1; i++) {
+            if (min > numArray[i]) {
+                min = numArray[i];
+            }
+            if (max < numArray[i]) {
+                max = numArray[i];
+            }
+        }
+        out.println("Min: " + min);
+        out.println("Max: " + max);
     }
 }
