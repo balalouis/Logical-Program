@@ -3,6 +3,7 @@ import array.MyArray;
 import company.Litmus;
 import company.PicsArt;
 import company.TCS;
+import google.PairOfNumberEqualsToSum;
 import graph.Graph;
 import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJava;
@@ -19,15 +20,92 @@ import tree.MyTree;
 
 import static java.lang.System.out;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 public class LogicalProgram {
 
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        int[] num = {2, 4, 6, 8, 10, 12};
-        reverseArray(num);
+        String input = "[([]])";
+//        "()))" "([}}])", ")(){}", "[([]])"
+//        out.println("-----> " + isValidParenthesis(input));
+        collectionOfSum();
+    }
+
+    private static void collectionOfSum(){
+        int[] num = {1, 2, 3, 5};
+        PairOfNumberEqualsToSum pairOfNumberEqualsToSum =new PairOfNumberEqualsToSum();
+        pairOfNumberEqualsToSum.findPairOfSumEqualsToNumberInEfficiantWay(num,8);
+    }
+
+    private static boolean isValidParenthesis(String s) {
+        boolean isValid = false;
+
+        ArrayList<String> closingBracketList = new ArrayList<>();
+        closingBracketList.add(")");
+        closingBracketList.add("]");
+        closingBracketList.add("}");
+
+        if (s.length() % 2 != 0 || closingBracketList.contains(String.valueOf(s.charAt(0)))) {
+            return isValid;
+        }
+
+        ArrayList<String> openBracketList = new ArrayList<>();
+        openBracketList.add("(");
+        openBracketList.add("[");
+        openBracketList.add("{");
+
+        HashMap<String, String> hashMapParenthesis = new HashMap<>();
+        hashMapParenthesis.put(")", "(");
+        hashMapParenthesis.put("]", "[");
+        hashMapParenthesis.put("}", "{");
+
+        LinkedList<String> stackList = new LinkedList<>();
+        for (int i = 0; i < s.length(); i++) {
+            String currentChar = String.valueOf(s.charAt(i));
+            if (openBracketList.contains(currentChar)) {
+                stackList.add(currentChar);
+            }
+
+            if(isClosingBracketFound(closingBracketList, currentChar)){
+                if(stackList.isEmpty()){
+                    return false;
+                }else if(!removeOpenBrackets(stackList,currentChar, hashMapParenthesis)){
+                    return false;
+                }
+            }
+        }
+
+        out.println(stackList.size());
+
+        if (stackList.isEmpty()) {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    private static boolean isClosingBracketFound(ArrayList<String> closingBracketList, String currentChar){
+        return closingBracketList.contains(currentChar);
+    }
+
+    private static boolean removeOpenBrackets(LinkedList<String> stackList, String currentChar, HashMap<String, String> hashMapParenthesis){
+        boolean isValid = true;
+        int size = stackList.size();
+        String stackChar = stackList.get(size - 1);
+        if (hashMapParenthesis.get(currentChar).equalsIgnoreCase(stackChar)) {
+            stackList.remove(stackChar);
+        } else {
+            isValid = false;
+        }
+        return isValid;
+    }
+
+    private boolean validateClosingBracket(ArrayList<String> stackList, ArrayList<String> closingBracketList, String currentChar) {
+        return !stackList.isEmpty() || !closingBracketList.contains(currentChar);
     }
 
     private static void traverseString() {
@@ -44,6 +122,23 @@ public class LogicalProgram {
             out.println("-------");
         }
         out.println("Palindrome :" + palindromeText);
+    }
+
+    private static void logAllPairArray() {
+        int num[] = {1, 2, 3, 4, 5};
+
+        for (int i = 0; i < num.length; i++) {
+            out.println("First loop: " + num[i]);
+            for (int j = 0; j < num.length; j++) {
+                out.println("Nested loop: " + num[j]);
+            }
+            out.println();
+        }
+    }
+
+    private static void reverseIntegerArray() {
+        int[] num = {2, 4, 6, 8, 10, 12};
+        reverseArray(num);
     }
 
     private static void reverseArray(int[] num) {
