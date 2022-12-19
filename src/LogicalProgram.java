@@ -1,5 +1,9 @@
+import array.FindCommonItem;
 import array.LogicalProgramInArray;
+import array.MergeSortedArrayDec;
 import array.MyArray;
+import array.MyArrayDec;
+import array.ReverseString;
 import company.Litmus;
 import company.PicsArt;
 import company.TCS;
@@ -33,7 +37,41 @@ public class LogicalProgram {
         String input = "[([]])";
 //        "()))" "([}}])", ")(){}", "[([]])"
 //        out.println("-----> " + isValidParenthesis(input));
-        collectionOfSum();
+            mergedArray();
+    }
+
+    private static void reverseString(){
+        ReverseString reverseString=new ReverseString();
+        reverseString.reverseString("Hi how are you");
+    }
+
+    private static void mergedArray(){
+        MergeSortedArrayDec mergeSortedArrayDec =new MergeSortedArrayDec();
+        int[] arrayOne = {0,3,4,31,38};
+        int[] arrayTwo = {4,6,30,46};
+        mergeSortedArrayDec.mergeSortedArray(arrayOne,arrayTwo);
+    }
+
+    private static void myArrayDec(){
+        MyArrayDec myArrayDec=new MyArrayDec();
+        myArrayDec.push("a");
+        myArrayDec.push("b");
+        myArrayDec.push("d");
+        myArrayDec.push("e");
+        myArrayDec.printNameArray();
+        myArrayDec.insert(2,"c");
+        myArrayDec.printNameArray();
+        myArrayDec.delete(2);
+        myArrayDec.delete(2);
+        myArrayDec.printNameArray();
+    }
+
+    private static void findCommonItems(){
+         String[] arrayOne={"a","b","c","x"};
+         String[] arrayTwo={"z","y","x"};
+        FindCommonItem findCommonItem=new FindCommonItem();
+        boolean commonItem=findCommonItem.findCommonItemEfficiant(arrayOne,arrayTwo);
+        out.println("Common Item: "+commonItem);
     }
 
     private static void collectionOfSum(){
