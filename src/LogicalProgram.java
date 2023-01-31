@@ -10,6 +10,7 @@ import company.TCS;
 import google.PairOfNumberEqualsToSum;
 import graph.Graph;
 import hashmap.LogicalProgramInHashMap;
+import hashmap.MyHashMapJan2023;
 import hashmap.MyHashMapJava;
 import leetcode.LeetCodeMedium;
 import linkedlist.DoubleLinkedList;
@@ -34,10 +35,13 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        String input = "[([]])";
-//        "()))" "([}}])", ")(){}", "[([]])"
-//        out.println("-----> " + isValidParenthesis(input));
-            mergedArray();
+        MyHashMapJan2023 myHashMapJan2023=new MyHashMapJan2023(20);
+        myHashMapJan2023.setValue("10001","Apple");
+        myHashMapJan2023.setValue("10002","Orange");
+        myHashMapJan2023.setValue("10003","Banana");
+        myHashMapJan2023.setValue("10004","Pineapple");
+
+        myHashMapJan2023.getValue("10003");
     }
 
     private static void reverseString(){

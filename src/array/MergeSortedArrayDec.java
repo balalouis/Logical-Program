@@ -11,12 +11,11 @@ public class MergeSortedArrayDec {
         int firstArrayCurrentPosition =0;
         int secondArrayCurrentPosition =0;
         ArrayList mergedList=new ArrayList();
-        int firstArrayCurrentValue=0;
-        int secondArrayCurrentValue = 0;
+        int firstArrayCurrentValue;
+        int secondArrayCurrentValue;
 
         int totalMergedArraySize = arrayOne.length + arrayTwo.length;
-        while(mergedList.size()<=totalMergedArraySize && !(isArrayReachedEnd(arrayOne,firstArrayCurrentPosition))
-        || (isArrayReachedEnd(arrayTwo,secondArrayCurrentPosition))){
+        while(mergedList.size()<=totalMergedArraySize){
 
             if(!isArrayReachedEnd(arrayOne,firstArrayCurrentPosition)){
                 firstArrayCurrentValue=arrayOne[firstArrayCurrentPosition];
