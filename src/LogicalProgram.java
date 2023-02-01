@@ -35,13 +35,13 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        MyHashMapJan2023 myHashMapJan2023=new MyHashMapJan2023(20);
-        myHashMapJan2023.setValue("10001","Apple");
-        myHashMapJan2023.setValue("10002","Orange");
-        myHashMapJan2023.setValue("10003","Banana");
-        myHashMapJan2023.setValue("10004","Pineapple");
+        MyHashMapJan2023 myHashMapJan2023=new MyHashMapJan2023(4);
+        myHashMapJan2023.setValue("Apple",10001);
+        myHashMapJan2023.setValue("Orange",10002);
+        myHashMapJan2023.setValue("Banana",10003);
+        myHashMapJan2023.setValue("Pineapple",10004);
 
-        myHashMapJan2023.getValue("10003");
+        myHashMapJan2023.getKeysCoalition();
     }
 
     private static void reverseString(){
