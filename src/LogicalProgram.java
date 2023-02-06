@@ -9,6 +9,7 @@ import company.PicsArt;
 import company.TCS;
 import google.PairOfNumberEqualsToSum;
 import graph.Graph;
+import hashmap.FindFirstRecurringCharJan2023;
 import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJan2023;
 import hashmap.MyHashMapJava;
@@ -35,13 +36,13 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        MyHashMapJan2023 myHashMapJan2023=new MyHashMapJan2023(4);
-        myHashMapJan2023.setValue("Apple",10001);
-        myHashMapJan2023.setValue("Orange",10002);
-        myHashMapJan2023.setValue("Banana",10003);
-        myHashMapJan2023.setValue("Pineapple",10004);
+        findFirstRecurringCharacter();
+    }
 
-        myHashMapJan2023.getKeysCoalition();
+    private static void findFirstRecurringCharacter(){
+        int[] num_array={2,5,1,2,3,5,1,2,4};
+        FindFirstRecurringCharJan2023 obj=new FindFirstRecurringCharJan2023(num_array);
+        obj.findFirstRepeatedCharacterViaLoop();
     }
 
     private static void reverseString(){
