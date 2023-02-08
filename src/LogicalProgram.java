@@ -15,6 +15,7 @@ import hashmap.MyHashMapJan2023;
 import hashmap.MyHashMapJava;
 import leetcode.LeetCodeMedium;
 import linkedlist.DoubleLinkedList;
+import linkedlist.DoubleLinkedListJan2023;
 import linkedlist.MySingleLinkList;
 import linkedlist.SingleLinkedListJan2023;
 import queue.MyQueueViaArray;
@@ -37,7 +38,16 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        singleLinkedList();
+        doubleLinkedListJan2023();
+    }
+
+    private static void doubleLinkedListJan2023(){
+        DoubleLinkedListJan2023 doubleLinkedListJan2023=new DoubleLinkedListJan2023(10);
+        doubleLinkedListJan2023.append(7);
+        doubleLinkedListJan2023.printDoubleLinkedList();
+        doubleLinkedListJan2023.prepend(27);
+        doubleLinkedListJan2023.prepend(22);
+        doubleLinkedListJan2023.printDoubleLinkedList();
     }
 
     private static void singleLinkedList(){
