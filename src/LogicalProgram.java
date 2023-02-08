@@ -16,6 +16,7 @@ import hashmap.MyHashMapJava;
 import leetcode.LeetCodeMedium;
 import linkedlist.DoubleLinkedList;
 import linkedlist.MySingleLinkList;
+import linkedlist.SingleLinkedListJan2023;
 import queue.MyQueueViaArray;
 import queue.MyQueueViaLinkedList;
 import recursive.Factorial;
@@ -36,7 +37,17 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        findFirstRecurringCharacter();
+        singleLinkedList();
+    }
+
+    private static void singleLinkedList(){
+        SingleLinkedListJan2023 singleLinkedListJan2023=new SingleLinkedListJan2023(10);
+        singleLinkedListJan2023.append(12);
+        singleLinkedListJan2023.append(7);
+        singleLinkedListJan2023.append(5);
+        singleLinkedListJan2023.printNode();
+        singleLinkedListJan2023.remove(4);
+        singleLinkedListJan2023.printNode();
     }
 
     private static void findFirstRecurringCharacter(){
