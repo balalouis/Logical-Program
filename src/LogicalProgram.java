@@ -38,7 +38,7 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        doubleLinkedListJan2023();
+        singleLinkedList();
     }
 
     private static void doubleLinkedListJan2023(){
@@ -55,9 +55,7 @@ public class LogicalProgram {
         singleLinkedListJan2023.append(12);
         singleLinkedListJan2023.append(7);
         singleLinkedListJan2023.append(5);
-        singleLinkedListJan2023.printNode();
-        singleLinkedListJan2023.remove(4);
-        singleLinkedListJan2023.printNode();
+        singleLinkedListJan2023.reverse(singleLinkedListJan2023.head);
     }
 
     private static void findFirstRecurringCharacter(){

@@ -1,7 +1,9 @@
 package linkedlist;
 
+import static java.lang.System.out;
+
 public class SingleLinkedListJan2023 {
-    SingleNode head;
+    public SingleNode head;
     SingleNode tail;
     int length;
 
@@ -23,7 +25,7 @@ public class SingleLinkedListJan2023 {
         newNode.next = head;
         head = newNode;
         length++;
-        System.out.println("Length: "+length);
+        out.println("Length: "+length);
     }
 
     public void insert(int index, int value){
@@ -67,7 +69,7 @@ public class SingleLinkedListJan2023 {
         SingleNode currentNode = head;
         SingleNode prevNode =null;
         int currentIndex =0;
-        System.out.println();
+        out.println();
         while (currentNode.next!=null){
             prevNode = currentNode;
             currentNode = currentNode.next;
@@ -82,15 +84,22 @@ public class SingleLinkedListJan2023 {
 
     }
 
+    public void reverse(SingleNode singleNode){
+        if (singleNode.next != null) {
+            reverse(singleNode.next);
+        }
+        out.println("Value: "+singleNode.value);
+    }
+
     public void printNode(){
-        System.out.println("============================================");
+        out.println("============================================");
         SingleNode currentNode = head;
-        System.out.print("Head ==>"+currentNode.value);
+        out.print("Head ==>"+currentNode.value);
         while(currentNode.next!=null){
             currentNode = currentNode.next;
-            System.out.print("==> "+currentNode.value);
+            out.print("==> "+currentNode.value);
         }
-        System.out.println();
+        out.println();
     }
 
 }
