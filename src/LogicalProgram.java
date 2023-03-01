@@ -23,6 +23,7 @@ import queue.MyQueueViaLinkedList;
 import recursive.Factorial;
 import recursive.Fibonacci;
 import stack.MyStackViaArray;
+import stack.MyStackViaArray2023;
 import stack.MyStackViaLinkedList;
 import stack.MyStackViaLinkedListJan2023;
 import tree.MyTree;
@@ -43,29 +44,33 @@ public class LogicalProgram {
     }
 
     private static void stack2013(){
-        MyStackViaLinkedListJan2023 stack=new MyStackViaLinkedListJan2023();
+        /*MyStackViaLinkedListJan2023 stack=new MyStackViaLinkedListJan2023();
+        stack.push(10);
+        stack.push(12);
+        stack.push(7);
+        stack.push(5);*/
+
+        MyStackViaArray2023 stack=new MyStackViaArray2023();
         stack.push(10);
         stack.push(12);
         stack.push(7);
         stack.push(5);
         stack.print();
-        out.println();
-        stack.pop();
-        stack.print();
-        out.println();
+
         stack.pop();
         stack.print();
 
-        out.println();
         stack.pop();
         stack.print();
 
-        out.println();
-        stack.push(47);
+        stack.pop();
         stack.print();
 
-        out.println();
-        stack.push(23);
+        stack.pop();
+        stack.print();
+
+
+        stack.pop();
         stack.print();
     }
 
