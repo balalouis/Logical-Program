@@ -12,6 +12,14 @@ public class MyStackViaLinkedListJan2023 {
         tail = null;
     }
 
+    public void peek(){
+        if(head==null){
+            System.out.println("There is no item");
+        }else {
+            System.out.println("Peeked value is "+head.value);
+        }
+    }
+
     public void push(int value){
         NodeForStack newNode=new NodeForStack(value);
         if(head==null){
