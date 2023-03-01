@@ -24,6 +24,7 @@ import recursive.Factorial;
 import recursive.Fibonacci;
 import stack.MyStackViaArray;
 import stack.MyStackViaLinkedList;
+import stack.MyStackViaLinkedListJan2023;
 import tree.MyTree;
 
 import static java.lang.System.out;
@@ -38,7 +39,34 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        singleLinkedList();
+        stack2013();
+    }
+
+    private static void stack2013(){
+        MyStackViaLinkedListJan2023 stack=new MyStackViaLinkedListJan2023();
+        stack.push(10);
+        stack.push(12);
+        stack.push(7);
+        stack.push(5);
+        stack.print();
+        out.println();
+        stack.pop();
+        stack.print();
+        out.println();
+        stack.pop();
+        stack.print();
+
+        out.println();
+        stack.pop();
+        stack.print();
+
+        out.println();
+        stack.push(47);
+        stack.print();
+
+        out.println();
+        stack.push(23);
+        stack.print();
     }
 
     private static void doubleLinkedListJan2023(){
