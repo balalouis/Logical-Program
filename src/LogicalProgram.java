@@ -20,6 +20,7 @@ import linkedlist.MySingleLinkList;
 import linkedlist.SingleLinkedListJan2023;
 import queue.MyQueueViaArray;
 import queue.MyQueueViaLinkedList;
+import queue.MyQueueViaLinkedListJan2023;
 import recursive.Factorial;
 import recursive.Fibonacci;
 import stack.MyStackViaArray;
@@ -40,7 +41,7 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        stack2013();
+        queueJan2023();
     }
 
     private static void stack2013(){
@@ -72,6 +73,24 @@ public class LogicalProgram {
 
         stack.pop();
         stack.print();
+    }
+
+    private static void queueJan2023(){
+        MyQueueViaLinkedListJan2023 queue=new MyQueueViaLinkedListJan2023();
+        queue.enqueue(10);
+        queue.enqueue(5);
+        queue.enqueue(7);
+        queue.enqueue(12);
+        queue.print();
+
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
     }
 
     private static void doubleLinkedListJan2023(){
