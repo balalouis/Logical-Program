@@ -28,6 +28,7 @@ import stack.MyStackViaArray2023;
 import stack.MyStackViaLinkedList;
 import stack.MyStackViaLinkedListJan2023;
 import tree.MyTree;
+import tree.MyTree2023;
 
 import static java.lang.System.out;
 
@@ -41,7 +42,21 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        queueJan2023();
+        tree2013();
+    }
+
+    private static void tree2013(){
+        MyTree2023 myTree2023=new MyTree2023();
+        myTree2023.insert(9);
+        myTree2023.insert(4);
+        myTree2023.insert(6);
+        myTree2023.insert(20);
+        myTree2023.insert(170);
+        myTree2023.insert(15);
+        myTree2023.insert(1);
+        myTree2023.traverseTree(myTree2023.root);
+
+        myTree2023.lookup(15);
     }
 
     private static void stack2013(){
