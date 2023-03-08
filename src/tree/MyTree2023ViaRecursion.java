@@ -1,9 +1,9 @@
 package tree;
 
-public class MyTree2023 {
+public class MyTree2023ViaRecursion {
 
     public Node root;
-    public MyTree2023(){
+    public MyTree2023ViaRecursion(){
         root = null;
     }
 

@@ -11,7 +11,6 @@ import google.PairOfNumberEqualsToSum;
 import graph.Graph;
 import hashmap.FindFirstRecurringCharJan2023;
 import hashmap.LogicalProgramInHashMap;
-import hashmap.MyHashMapJan2023;
 import hashmap.MyHashMapJava;
 import leetcode.LeetCodeMedium;
 import linkedlist.DoubleLinkedList;
@@ -26,9 +25,8 @@ import recursive.Fibonacci;
 import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
 import stack.MyStackViaLinkedList;
-import stack.MyStackViaLinkedListJan2023;
 import tree.MyTree;
-import tree.MyTree2023;
+import tree.MyTree2023ViaRecursion;
 
 import static java.lang.System.out;
 
@@ -46,17 +44,17 @@ public class LogicalProgram {
     }
 
     private static void tree2013(){
-        MyTree2023 myTree2023=new MyTree2023();
-        myTree2023.insert(9);
-        myTree2023.insert(4);
-        myTree2023.insert(6);
-        myTree2023.insert(20);
-        myTree2023.insert(170);
-        myTree2023.insert(15);
-        myTree2023.insert(1);
-        myTree2023.traverseTree(myTree2023.root);
+        MyTree2023ViaRecursion myTree2023ViaRecursion =new MyTree2023ViaRecursion();
+        myTree2023ViaRecursion.insert(9);
+        myTree2023ViaRecursion.insert(4);
+        myTree2023ViaRecursion.insert(6);
+        myTree2023ViaRecursion.insert(20);
+        myTree2023ViaRecursion.insert(170);
+        myTree2023ViaRecursion.insert(15);
+        myTree2023ViaRecursion.insert(1);
+        myTree2023ViaRecursion.traverseTree(myTree2023ViaRecursion.root);
 
-        myTree2023.lookup(15);
+        myTree2023ViaRecursion.lookup(15);
     }
 
     private static void stack2013(){
