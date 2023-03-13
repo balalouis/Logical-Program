@@ -26,6 +26,7 @@ import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
 import stack.MyStackViaLinkedList;
 import tree.MyTree;
+import tree.MyTree2023ViaLoop;
 import tree.MyTree2023ViaRecursion;
 
 import static java.lang.System.out;
@@ -40,10 +41,30 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        tree2013();
+        tree2023();
     }
 
-    private static void tree2013(){
+    private static void tree2023(){
+        tree2023ViaLoop();
+    }
+
+    private static void tree2023ViaLoop(){
+        MyTree2023ViaLoop tree = new MyTree2023ViaLoop();
+        tree.insert(9);
+        tree.insert(4);
+        tree.insert(6);
+        tree.insert(20);
+        tree.insert(170);
+        tree.insert(15);
+        tree.insert(1);
+
+        tree.traverseTree(tree.root);
+
+        boolean isNodeFound=tree.search(tree.root, 15);
+        out.println("Node found: "+isNodeFound);
+    }
+
+    private static void tree2023ViaRecursion(){
         MyTree2023ViaRecursion myTree2023ViaRecursion =new MyTree2023ViaRecursion();
         myTree2023ViaRecursion.insert(9);
         myTree2023ViaRecursion.insert(4);
