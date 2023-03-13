@@ -60,8 +60,7 @@ public class LogicalProgram {
 
         tree.traverseTree(tree.root);
 
-        boolean isNodeFound=tree.search(tree.root, 15);
-        out.println("Node found: "+isNodeFound);
+        tree.remove(tree.root, 15);
     }
 
     private static void tree2023ViaRecursion(){

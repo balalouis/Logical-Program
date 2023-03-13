@@ -31,8 +31,44 @@ public class MyTree2023ViaLoop {
         return isNodeFound;
     }
 
-    public void remove(int value){
+    public void remove(Node currentNode, int value){
+        Node prevNode = null;
+        while (currentNode!=null){
+            if(value==currentNode.value){
+                break;
+            }else if(value < currentNode.value){
+                prevNode = currentNode;
+                currentNode = currentNode.left;
+            }else {
+                prevNode = currentNode;
+                currentNode = currentNode.right;
+            }
+        }
+        System.out.println("Prev node value is: "+prevNode.value);
+        System.out.println("Searched node value is: "+currentNode.value);
+        if(currentNode.left!=null && currentNode.right!=null){
+            Node currentLeft = currentNode.left;
+            Node currentRight = currentNode.right;
+            if(currentNode.value < prevNode.value){
+                prevNode.left = currentRight;
+                currentRight.left = currentLeft;
+            }else {
+                prevNode.right = currentRight;
+                currentRight.left = currentLeft;
+            }
+        }else if(currentNode.left==null && currentNode.right==null){
+            if(currentNode.value < prevNode.value){
+                prevNode.left =null;
+            }else {
+                prevNode.right =null;
+            }
+        }else if(currentNode.left != null){
+            currentNode.left =null;
+        }else {
+            currentNode.right=null;
+        }
 
+        traverseTree(root);
     }
 
     private void findPositionToInsert(Node currentNode, Node newNode) {
