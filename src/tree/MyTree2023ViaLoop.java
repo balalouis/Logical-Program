@@ -44,31 +44,32 @@ public class MyTree2023ViaLoop {
                 currentNode = currentNode.right;
             }
         }
-        System.out.println("Prev node value is: "+prevNode.value);
-        System.out.println("Searched node value is: "+currentNode.value);
-        if(currentNode.left!=null && currentNode.right!=null){
-            Node currentLeft = currentNode.left;
-            Node currentRight = currentNode.right;
-            if(currentNode.value < prevNode.value){
-                prevNode.left = currentRight;
-                currentRight.left = currentLeft;
-            }else {
-                prevNode.right = currentRight;
-                currentRight.left = currentLeft;
+        if(currentNode!=null) {
+            if (currentNode.left != null && currentNode.right != null) {
+                Node currentLeft = currentNode.left;
+                Node currentRight = currentNode.right;
+                if (currentNode.value < prevNode.value) {
+                    prevNode.left = currentRight;
+                    currentRight.left = currentLeft;
+                } else {
+                    prevNode.right = currentRight;
+                    currentRight.left = currentLeft;
+                }
+            } else if (currentNode.left == null && currentNode.right == null) {
+                if (currentNode.value < prevNode.value) {
+                    prevNode.left = null;
+                } else {
+                    prevNode.right = null;
+                }
+            } else if (currentNode.left != null) {
+                currentNode.left = null;
+            } else {
+                currentNode.right = null;
             }
-        }else if(currentNode.left==null && currentNode.right==null){
-            if(currentNode.value < prevNode.value){
-                prevNode.left =null;
-            }else {
-                prevNode.right =null;
-            }
-        }else if(currentNode.left != null){
-            currentNode.left =null;
+            traverseTree(root);
         }else {
-            currentNode.right=null;
+            System.out.println("No node found");
         }
-
-        traverseTree(root);
     }
 
     private void findPositionToInsert(Node currentNode, Node newNode) {

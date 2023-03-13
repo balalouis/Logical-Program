@@ -60,7 +60,7 @@ public class LogicalProgram {
 
         tree.traverseTree(tree.root);
 
-        tree.remove(tree.root, 15);
+        tree.remove(tree.root, 150);
     }
 
     private static void tree2023ViaRecursion(){
