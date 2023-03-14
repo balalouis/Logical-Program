@@ -45,7 +45,7 @@ public class LogicalProgram {
     }
 
     private static void tree2023(){
-        tree2023ViaLoop();
+        tree2023ViaRecursion();
     }
 
     private static void tree2023ViaLoop(){
@@ -74,7 +74,7 @@ public class LogicalProgram {
         myTree2023ViaRecursion.insert(1);
         myTree2023ViaRecursion.traverseTree(myTree2023ViaRecursion.root);
 
-        myTree2023ViaRecursion.lookup(15);
+        myTree2023ViaRecursion.removeFromTree( 15);
     }
 
     private static void stack2013(){

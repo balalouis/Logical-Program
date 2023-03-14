@@ -42,6 +42,64 @@ public class MyTree2023ViaRecursion {
         return isNodeFound;
     }
 
+    public void  removeFromTree(int value){
+        Node prevNode = null;
+        remove(root,prevNode, value);
+    }
+
+    public Node remove(Node currentNode, Node prevNode,int value){
+        if(currentNode!=null) {
+            if (currentNode.value == value) {
+                System.out.println("Node found");
+                removeNodeFromTree(currentNode,prevNode,value);
+
+            } else if (value < currentNode.value) {
+                prevNode = currentNode;
+                currentNode = remove(currentNode.left,prevNode, value);
+            } else {
+                prevNode = currentNode;
+                currentNode = remove(currentNode.right,prevNode, value);
+            }
+        }else {
+            System.out.println("Node not found");
+        }
+
+        return currentNode;
+    }
+
+    void removeNodeFromTree(Node removeNode, Node prevNode, int value){
+        if(removeNode.left!=null && removeNode.right!=null){
+            Node leftNode = removeNode.left;
+            Node rightNode = removeNode.right;
+            if(value < prevNode.value){
+                rightNode.left = leftNode;
+                prevNode.left = rightNode;
+            }else {
+                prevNode.right = rightNode;
+                rightNode.left = leftNode;
+            }
+        }else if(removeNode.left != null){
+            if(value < prevNode.value){
+                prevNode.left = removeNode.left;
+            }else {
+                prevNode.right = removeNode.left;
+            }
+        }else if(removeNode.right !=null){
+            if(value < prevNode.value){
+                prevNode.left = removeNode.right;
+            }else {
+                prevNode.right = removeNode.right;
+            }
+        }else {
+            if(value< prevNode.value){
+                prevNode.left = null;
+            }else {
+                prevNode.right = null;
+            }
+        }
+        traverseTree(root);
+    }
+
     public void findPositionToInsert(Node current_node, Node newNode){
         if(current_node!=null && newNode.value < current_node.value){
                 if(current_node.left!=null){
