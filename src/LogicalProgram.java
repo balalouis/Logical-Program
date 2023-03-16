@@ -22,6 +22,7 @@ import queue.MyQueueViaArray;
 import queue.MyQueueViaLinkedList;
 import queue.MyQueueViaLinkedListJan2023;
 import recursive.Factorial;
+import recursive.FactorialJan2023;
 import recursive.Fibonacci;
 import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
@@ -42,7 +43,15 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        graphJan2023();
+        factJan2023();
+    }
+
+    private static void factJan2023(){
+        FactorialJan2023 fact=new FactorialJan2023();
+//        fact.factorialViaLoop(5);
+        int num =6;
+        int factValue=fact.factorialViaRecursive(num,num);
+        out.println("Fact value: "+factValue);
     }
 
     private static void tree2023(){
