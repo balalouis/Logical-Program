@@ -9,6 +9,7 @@ import company.PicsArt;
 import company.TCS;
 import google.PairOfNumberEqualsToSum;
 import graph.Graph;
+import graph.GraphJan2013;
 import hashmap.FindFirstRecurringCharJan2023;
 import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJava;
@@ -41,7 +42,7 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        tree2023();
+        graphJan2023();
     }
 
     private static void tree2023(){
@@ -476,6 +477,28 @@ public class LogicalProgram {
     private static void litmus() {
         Litmus litmus = new Litmus();
         litmus.findArmstrongNumber();
+    }
+
+    private static void graphJan2023() {
+        GraphJan2013 graph = new GraphJan2013();
+        graph.addVertex(0);
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addVertex(4);
+        graph.addVertex(5);
+        graph.addVertex(6);
+
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 0);
+        graph.addEdge(0, 2);
+        graph.addEdge(6, 5);
+        graph.addEdge(3, 1);
+        graph.addEdge(3, 4);
+        graph.addEdge(4, 2);
+        graph.addEdge(4, 5);
+
+        graph.showConnection();
     }
 
     private static void graph() {
