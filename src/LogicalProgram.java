@@ -24,6 +24,7 @@ import queue.MyQueueViaLinkedListJan2023;
 import recursive.Factorial;
 import recursive.FactorialJan2023;
 import recursive.Fibonacci;
+import recursive.FibonacciJan2023;
 import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
 import stack.MyStackViaLinkedList;
@@ -43,7 +44,13 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        factJan2023();
+        fiboJan2023();
+    }
+
+    private static void fiboJan2023(){
+        FibonacciJan2023 fibo=new FibonacciJan2023();
+        int value=fibo.fibonacciViaRecursion(7,0,1,0);
+        out.println("Fibonacci :"+value);
     }
 
     private static void factJan2023(){
