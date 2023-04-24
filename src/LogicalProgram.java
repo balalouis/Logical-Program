@@ -25,6 +25,8 @@ import recursive.Factorial;
 import recursive.FactorialJan2023;
 import recursive.Fibonacci;
 import recursive.FibonacciJan2023;
+import sort.BubbleSort;
+import sort.SelectionSort;
 import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
 import stack.MyStackViaLinkedList;
@@ -44,7 +46,21 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        fiboJan2023();
+        sort();
+    }
+
+    private static void sort(){
+        selectionSort();
+    }
+
+    private static void bubbleSort(){
+        BubbleSort bubbleSort=new BubbleSort();
+        bubbleSort.bubbleSort();
+    }
+
+    private static void selectionSort(){
+        SelectionSort selectionSort=new SelectionSort();
+        selectionSort.selectionSort();
     }
 
     private static void fiboJan2023(){
