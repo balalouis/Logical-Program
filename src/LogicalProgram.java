@@ -26,6 +26,7 @@ import recursive.FactorialJan2023;
 import recursive.Fibonacci;
 import recursive.FibonacciJan2023;
 import sort.BubbleSort;
+import sort.InsertionSort;
 import sort.SelectionSort;
 import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
@@ -50,7 +51,12 @@ public class LogicalProgram {
     }
 
     private static void sort(){
-        selectionSort();
+        insertionSort();
+    }
+
+    private static void insertionSort(){
+        InsertionSort insertionSort=new InsertionSort();
+        insertionSort.insertSortSection();
     }
 
     private static void bubbleSort(){
