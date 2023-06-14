@@ -27,6 +27,7 @@ import recursive.Fibonacci;
 import recursive.FibonacciJan2023;
 import sort.BubbleSort;
 import sort.InsertionSort;
+import sort.MergeSort;
 import sort.SelectionSort;
 import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
@@ -51,7 +52,12 @@ public class LogicalProgram {
     }
 
     private static void sort(){
-        insertionSort();
+        mergeSort();
+    }
+
+    private static void mergeSort(){
+        MergeSort mergeSort=new MergeSort();
+        mergeSort.dummyMerge();
     }
 
     private static void insertionSort(){
