@@ -5,13 +5,9 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    int[] numArray = {6, 5, 3, 1, 8, 7, 2, 4};
 
-    public void dummyMerge(){
-        mergeSort(numArray);
-    }
 
-    private int[] mergeSort(int[] currentArray){
+    public int[] mergeSort(int[] currentArray){
         if (currentArray.length == 1) {
             return currentArray;
         }

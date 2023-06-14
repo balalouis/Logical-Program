@@ -57,7 +57,9 @@ public class LogicalProgram {
 
     private static void mergeSort(){
         MergeSort mergeSort=new MergeSort();
-        mergeSort.dummyMerge();
+        int[] numArray = {6, 5, 3, 1, 8, 7, 2, 4};
+        int[] sortedArray=mergeSort.mergeSort(numArray);
+        out.println("Final Sorted Array: " + Arrays.toString(sortedArray));
     }
 
     private static void insertionSort(){
