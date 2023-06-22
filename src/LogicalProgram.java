@@ -28,6 +28,7 @@ import recursive.FibonacciJan2023;
 import sort.BubbleSort;
 import sort.InsertionSort;
 import sort.MergeSort;
+import sort.QuickSort;
 import sort.SelectionSort;
 import stack.MyStackViaArray;
 import stack.MyStackViaArray2023;
@@ -52,7 +53,12 @@ public class LogicalProgram {
     }
 
     private static void sort(){
-        mergeSort();
+        quickSort();
+    }
+
+    private static void quickSort(){
+        QuickSort quickSort=new QuickSort();
+        quickSort.quickSort();
     }
 
     private static void mergeSort(){
