@@ -36,6 +36,7 @@ import stack.MyStackViaLinkedList;
 import tree.MyTree;
 import tree.MyTree2023ViaLoop;
 import tree.MyTree2023ViaRecursion;
+import tree.UdemyTree;
 
 import static java.lang.System.out;
 
@@ -49,7 +50,7 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        sort();
+        tree2023ViaLoop();
     }
 
     private static void sort(){
@@ -101,6 +102,20 @@ public class LogicalProgram {
         tree2023ViaRecursion();
     }
 
+    private static void treeViaUdemy(){
+        out.println("Udemy");
+        UdemyTree udemyTree=new UdemyTree();
+        udemyTree.insert(9);
+        udemyTree.insert(4);
+        udemyTree.insert(6);
+        udemyTree.insert(20);
+        udemyTree.insert(170);
+        udemyTree.insert(15);
+        udemyTree.insert(1);
+
+        udemyTree.breadthFirstSearchTree();
+    }
+
     private static void tree2023ViaLoop(){
         MyTree2023ViaLoop tree = new MyTree2023ViaLoop();
         tree.insert(9);
@@ -111,9 +126,9 @@ public class LogicalProgram {
         tree.insert(15);
         tree.insert(1);
 
-        tree.traverseTree(tree.root);
-
-        tree.remove(tree.root, 150);
+//        tree.traverseTree(tree.root);
+        tree.breadthFirstSearchTree();
+//        tree.remove(tree.root, 150);
     }
 
     private static void tree2023ViaRecursion(){

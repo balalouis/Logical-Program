@@ -1,5 +1,12 @@
 package tree;
 
+import static java.lang.System.out;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import queue.MyQueueViaLinkedList;
+
 public class MyTree2023ViaLoop {
 
     public Node root;
@@ -95,6 +102,32 @@ public class MyTree2023ViaLoop {
         System.out.println(""+currentNode.value);
         if(currentNode.right!=null){
             traverseTree(currentNode.right);
+        }
+    }
+
+
+    public void breadthFirstSearchTree(){
+        Node currentNode = root;
+        ArrayList<Node> al = new ArrayList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        al.add(root);
+        arrayList.add(root.value);
+        while (al.size() != 0) {
+            Node left = currentNode.left;
+            Node right = currentNode.right;
+            System.out.println("Current Array List:" + arrayList);
+            if (left != null) {
+                al.add(al.size(), left);
+                arrayList.add(left.value);
+            }
+            if (right != null) {
+                al.add(al.size(), right);
+                arrayList.add(right.value);
+            }
+            al.remove(0);
+            if (al.size() != 0) {
+                currentNode = al.get(0);
+            }
         }
     }
 
