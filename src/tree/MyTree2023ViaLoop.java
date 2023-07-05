@@ -1,11 +1,6 @@
 package tree;
 
-import static java.lang.System.out;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import queue.MyQueueViaLinkedList;
 
 public class MyTree2023ViaLoop {
 
@@ -13,7 +8,7 @@ public class MyTree2023ViaLoop {
     public MyTree2023ViaLoop(){
         root = null;
     }
-
+    public ArrayList<Node> alBfs=new ArrayList<>();
     public void insert(int value){
         Node newNode = new Node(value);
         if(root==null){
@@ -105,8 +100,12 @@ public class MyTree2023ViaLoop {
         }
     }
 
+    public void startBfsViaRecursion(){
+        alBfs.add(root);
+        bfsViaRecursion(root);
+    }
 
-    public void breadthFirstSearchTree(){
+    public void bfsViaLoop(){
         Node currentNode = root;
         ArrayList<Node> al = new ArrayList<>();
         ArrayList<Integer> arrayList = new ArrayList<>();
@@ -128,6 +127,23 @@ public class MyTree2023ViaLoop {
             if (al.size() != 0) {
                 currentNode = al.get(0);
             }
+        }
+    }
+
+    public void bfsViaRecursion(Node currentNode){
+        if(currentNode==null){
+            return;
+        }
+        System.out.print("==> " + currentNode.value);
+        if(currentNode.left!=null){
+            alBfs.add(currentNode.left);
+        }
+        if(currentNode.right!=null){
+            alBfs.add(currentNode.right);
+        }
+        alBfs.remove(0);
+        if (alBfs.size() > 0) {
+            bfsViaRecursion(alBfs.get(0));
         }
     }
 

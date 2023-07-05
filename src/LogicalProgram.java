@@ -127,7 +127,8 @@ public class LogicalProgram {
         tree.insert(1);
 
 //        tree.traverseTree(tree.root);
-        tree.breadthFirstSearchTree();
+//        tree.breadthFirstSearchTreeViaLoop();
+        tree.startBfsViaRecursion();
 //        tree.remove(tree.root, 150);
     }
 
