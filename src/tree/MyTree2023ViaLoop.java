@@ -147,4 +147,13 @@ public class MyTree2023ViaLoop {
         }
     }
 
+    public void dfsInOrder(Node currentNode){
+        if(currentNode==null){
+            return;
+        }
+        dfsInOrder(currentNode.left);
+        System.out.print(currentNode.value + " ");
+        dfsInOrder(currentNode.right);
+    }
+
 }
