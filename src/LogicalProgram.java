@@ -126,7 +126,9 @@ public class LogicalProgram {
         tree.insert(15);
         tree.insert(1);
 
-        tree.dfsPreOrder(tree.root);
+//        tree.dfsInOrder(tree.root);
+//        tree.dfsPreOrder(tree.root);
+        tree.dfsPostOrder(tree.root);
 //        tree.traverseTree(tree.root);
 //        tree.breadthFirstSearchTreeViaLoop();
 //        tree.startBfsViaRecursion();
