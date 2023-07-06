@@ -156,4 +156,12 @@ public class MyTree2023ViaLoop {
         dfsInOrder(currentNode.right);
     }
 
+    public void dfsPreOrder(Node currentNode){
+        if(currentNode==null){
+            return;
+        }
+        System.out.print(currentNode.value + " ");
+        dfsInOrder(currentNode.left);
+        dfsPreOrder(currentNode.right);
+    }
 }
