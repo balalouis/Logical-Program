@@ -13,6 +13,7 @@ import graph.GraphJan2013;
 import hashmap.FindFirstRecurringCharJan2023;
 import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJava;
+import leetcode.LeetCodeEasyKt;
 import leetcode.LeetCodeMedium;
 import linkedlist.DoubleLinkedList;
 import linkedlist.DoubleLinkedListJan2023;
@@ -50,7 +51,7 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        tree2023ViaLoop();
+        leetCodeEasy();
     }
 
     private static void sort(){
@@ -598,6 +599,10 @@ public class LogicalProgram {
         LeetCodeMedium leetCodeMedium = new LeetCodeMedium();
         int longString = leetCodeMedium.lengthOfLongestSubstring("aab");
         out.println("Longest string: " + longString);
+    }
+
+    private static void leetCodeEasy(){
+        LeetCodeEasyKt.removeMain();
     }
 
     private static void findMaxAndMin() {

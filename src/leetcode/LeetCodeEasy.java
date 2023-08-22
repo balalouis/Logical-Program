@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.ArrayList;
+
 public class LeetCodeEasy {
     public boolean isPalindrome(int x) {
         char ss[] = String.valueOf(x).toCharArray();
@@ -14,4 +16,3 @@ public class LeetCodeEasy {
     }
 
 }
-
