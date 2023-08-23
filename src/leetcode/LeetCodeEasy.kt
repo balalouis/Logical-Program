@@ -3,8 +3,9 @@ package leetcode
 import java.util.*
 
 fun removeMain() {
-    val intArray = intArrayOf(3, 3, 6, 7, 7, 8, 8, 9, 9, 9)
-    removeDuplicate(intArray)
+    val intArray = intArrayOf(0, 1, 2, 2, 3)
+//    removeDuplicate(intArray)
+    removeElement(intArray, 2)
 }
 
 fun removeDuplicate(nums: IntArray) {
@@ -28,10 +29,15 @@ fun removeDuplicate(nums: IntArray) {
 
 fun removeElement(nums: IntArray, `val`: Int): Int {
     val arrayList = mutableListOf<Int>()
-    for (n in nums) {
-        if (!arrayList.contains(n)) {
-            arrayList.add(n)
+    var keyPosition = 0
+    for ((n, value) in nums.withIndex()) {
+        if (value != `val`) {
+            arrayList.add(value)
+            nums[keyPosition] = nums[n]
+            keyPosition++
         }
     }
+    System.out.println("Nums: " + nums.contentToString())
+    System.out.println("Nums: " + keyPosition)
     return arrayList.size
 }
