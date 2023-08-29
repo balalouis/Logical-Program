@@ -5,7 +5,8 @@ fun removeMain() {
 //    removeDuplicate(intArray)
 //    removeElement(intArray, 2)
 //    isValid("{[]}")
-    val result = isValidParenthsis("(){}}{")
+//    val result = isValidParenthsis("(){}}{")
+    val result = finalValueAfterOperations(arrayOf("--X", "X++", "X++"))
     println("Result: $result")
 }
 
@@ -69,4 +70,22 @@ fun isValidParenthsis(s: String): Boolean {
         }
     }
     return actualKeys.size == 0
+}
+
+fun finalValueAfterOperations(operations: Array<String>): Int {
+    val keyOnePos = "X++"
+    val keyTwoPos = "++X"
+    val keyOneNeg = "X--"
+    val keyTwoNeg = "--X"
+    var posCount = 0
+
+    for (item in operations) {
+        if (item.contains(keyOnePos) || item.contains(keyTwoPos)) {
+            posCount++
+        } else if (item.contains(keyOneNeg) || item.contains(keyTwoNeg)) {
+            posCount--
+        }
+        System.out.println("----> $item")
+    }
+    return posCount
 }
