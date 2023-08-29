@@ -6,7 +6,8 @@ fun removeMain() {
 //    removeElement(intArray, 2)
 //    isValid("{[]}")
 //    val result = isValidParenthsis("(){}}{")
-    val result = finalValueAfterOperations(arrayOf("--X", "X++", "X++"))
+//    val result = finalValueAfterOperations(arrayOf("--X", "X++", "X++"))
+    val result = numIdenticalPairs(intArrayOf(1, 2, 3, 1, 1, 3))
     println("Result: $result")
 }
 
@@ -88,4 +89,18 @@ fun finalValueAfterOperations(operations: Array<String>): Int {
         System.out.println("----> $item")
     }
     return posCount
+}
+
+fun numIdenticalPairs(nums: IntArray): Int {
+    var pairCount = 0
+    for ((i, value) in nums.withIndex()) {
+        var currPos = i + 1
+        while (currPos < nums.size) {
+            if (value == nums[currPos]) {
+                pairCount++
+            }
+            currPos++
+        }
+    }
+    return pairCount
 }
