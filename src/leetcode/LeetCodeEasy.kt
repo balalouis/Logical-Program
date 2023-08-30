@@ -7,7 +7,8 @@ fun removeMain() {
 //    isValid("{[]}")
 //    val result = isValidParenthsis("(){}}{")
 //    val result = finalValueAfterOperations(arrayOf("--X", "X++", "X++"))
-    val result = numIdenticalPairs(intArrayOf(1, 2, 3, 1, 1, 3))
+//    val result = numIdenticalPairs(intArrayOf(1, 2, 3, 1, 1, 3))
+    val result = maxProduct(intArrayOf(3, 4, 5, 2))
     println("Result: $result")
 }
 
@@ -103,4 +104,18 @@ fun numIdenticalPairs(nums: IntArray): Int {
         }
     }
     return pairCount
+}
+
+fun maxProduct(nums: IntArray): Int {
+    var max = 0
+    var secondMax = 0
+    for (n in nums) {
+        if (n >= max) {
+            secondMax = max
+            max = n
+        } else if (n > secondMax) {
+            secondMax = n
+        }
+    }
+    return (max - 1) * (secondMax - 1)
 }
