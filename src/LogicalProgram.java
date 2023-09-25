@@ -15,6 +15,7 @@ import hashmap.LogicalProgramInHashMap;
 import hashmap.MyHashMapJava;
 import leetcode.LeetCodeEasyKt;
 import leetcode.LeetCodeMedium;
+import leetcode.LeetCodeMediumKotlin;
 import linkedlist.DoubleLinkedList;
 import linkedlist.DoubleLinkedListJan2023;
 import linkedlist.MySingleLinkList;
@@ -51,61 +52,61 @@ public class LogicalProgram {
     private static String palindromeText = "";
 
     public static void main(String[] args) {
-        leetCodeEasy();
+        leetCodeMedium();
     }
 
-    private static void sort(){
+    private static void sort() {
         quickSort();
     }
 
-    private static void quickSort(){
-        QuickSort quickSort=new QuickSort();
+    private static void quickSort() {
+        QuickSort quickSort = new QuickSort();
         quickSort.quickSort();
     }
 
-    private static void mergeSort(){
-        MergeSort mergeSort=new MergeSort();
+    private static void mergeSort() {
+        MergeSort mergeSort = new MergeSort();
         int[] numArray = {6, 5, 3, 1, 8, 7, 2, 4};
-        int[] sortedArray=mergeSort.mergeSort(numArray);
+        int[] sortedArray = mergeSort.mergeSort(numArray);
         out.println("Final Sorted Array: " + Arrays.toString(sortedArray));
     }
 
-    private static void insertionSort(){
-        InsertionSort insertionSort=new InsertionSort();
+    private static void insertionSort() {
+        InsertionSort insertionSort = new InsertionSort();
         insertionSort.insertSortSection();
     }
 
-    private static void bubbleSort(){
-        BubbleSort bubbleSort=new BubbleSort();
+    private static void bubbleSort() {
+        BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.bubbleSort();
     }
 
-    private static void selectionSort(){
-        SelectionSort selectionSort=new SelectionSort();
+    private static void selectionSort() {
+        SelectionSort selectionSort = new SelectionSort();
         selectionSort.selectionSort();
     }
 
-    private static void fiboJan2023(){
-        FibonacciJan2023 fibo=new FibonacciJan2023();
-        int value=fibo.fibonacciViaRecursion(7,0,1,0);
-        out.println("Fibonacci :"+value);
+    private static void fiboJan2023() {
+        FibonacciJan2023 fibo = new FibonacciJan2023();
+        int value = fibo.fibonacciViaRecursion(7, 0, 1, 0);
+        out.println("Fibonacci :" + value);
     }
 
-    private static void factJan2023(){
-        FactorialJan2023 fact=new FactorialJan2023();
+    private static void factJan2023() {
+        FactorialJan2023 fact = new FactorialJan2023();
 //        fact.factorialViaLoop(5);
-        int num =6;
-        int factValue=fact.factorialViaRecursive(num,num);
-        out.println("Fact value: "+factValue);
+        int num = 6;
+        int factValue = fact.factorialViaRecursive(num, num);
+        out.println("Fact value: " + factValue);
     }
 
-    private static void tree2023(){
+    private static void tree2023() {
         tree2023ViaRecursion();
     }
 
-    private static void treeViaUdemy(){
+    private static void treeViaUdemy() {
         out.println("Udemy");
-        UdemyTree udemyTree=new UdemyTree();
+        UdemyTree udemyTree = new UdemyTree();
         udemyTree.insert(9);
         udemyTree.insert(4);
         udemyTree.insert(6);
@@ -117,7 +118,7 @@ public class LogicalProgram {
         udemyTree.breadthFirstSearchTree();
     }
 
-    private static void tree2023ViaLoop(){
+    private static void tree2023ViaLoop() {
         MyTree2023ViaLoop tree = new MyTree2023ViaLoop();
         tree.insert(9);
         tree.insert(4);
@@ -136,8 +137,8 @@ public class LogicalProgram {
 //        tree.remove(tree.root, 150);
     }
 
-    private static void tree2023ViaRecursion(){
-        MyTree2023ViaRecursion myTree2023ViaRecursion =new MyTree2023ViaRecursion();
+    private static void tree2023ViaRecursion() {
+        MyTree2023ViaRecursion myTree2023ViaRecursion = new MyTree2023ViaRecursion();
         myTree2023ViaRecursion.insert(9);
         myTree2023ViaRecursion.insert(4);
         myTree2023ViaRecursion.insert(6);
@@ -147,17 +148,17 @@ public class LogicalProgram {
         myTree2023ViaRecursion.insert(1);
         myTree2023ViaRecursion.traverseTree(myTree2023ViaRecursion.root);
 
-        myTree2023ViaRecursion.removeFromTree( 15);
+        myTree2023ViaRecursion.removeFromTree(15);
     }
 
-    private static void stack2013(){
+    private static void stack2013() {
         /*MyStackViaLinkedListJan2023 stack=new MyStackViaLinkedListJan2023();
         stack.push(10);
         stack.push(12);
         stack.push(7);
         stack.push(5);*/
 
-        MyStackViaArray2023 stack=new MyStackViaArray2023();
+        MyStackViaArray2023 stack = new MyStackViaArray2023();
         stack.push(10);
         stack.push(12);
         stack.push(7);
@@ -181,8 +182,8 @@ public class LogicalProgram {
         stack.print();
     }
 
-    private static void queueJan2023(){
-        MyQueueViaLinkedListJan2023 queue=new MyQueueViaLinkedListJan2023();
+    private static void queueJan2023() {
+        MyQueueViaLinkedListJan2023 queue = new MyQueueViaLinkedListJan2023();
         queue.enqueue(10);
         queue.enqueue(5);
         queue.enqueue(7);
@@ -199,8 +200,8 @@ public class LogicalProgram {
         queue.print();
     }
 
-    private static void doubleLinkedListJan2023(){
-        DoubleLinkedListJan2023 doubleLinkedListJan2023=new DoubleLinkedListJan2023(10);
+    private static void doubleLinkedListJan2023() {
+        DoubleLinkedListJan2023 doubleLinkedListJan2023 = new DoubleLinkedListJan2023(10);
         doubleLinkedListJan2023.append(7);
         doubleLinkedListJan2023.printDoubleLinkedList();
         doubleLinkedListJan2023.prepend(27);
@@ -208,58 +209,58 @@ public class LogicalProgram {
         doubleLinkedListJan2023.printDoubleLinkedList();
     }
 
-    private static void singleLinkedList(){
-        SingleLinkedListJan2023 singleLinkedListJan2023=new SingleLinkedListJan2023(10);
+    private static void singleLinkedList() {
+        SingleLinkedListJan2023 singleLinkedListJan2023 = new SingleLinkedListJan2023(10);
         singleLinkedListJan2023.append(12);
         singleLinkedListJan2023.append(7);
         singleLinkedListJan2023.append(5);
         singleLinkedListJan2023.reverse(singleLinkedListJan2023.head);
     }
 
-    private static void findFirstRecurringCharacter(){
-        int[] num_array={2,5,1,2,3,5,1,2,4};
-        FindFirstRecurringCharJan2023 obj=new FindFirstRecurringCharJan2023(num_array);
+    private static void findFirstRecurringCharacter() {
+        int[] num_array = {2, 5, 1, 2, 3, 5, 1, 2, 4};
+        FindFirstRecurringCharJan2023 obj = new FindFirstRecurringCharJan2023(num_array);
         obj.findFirstRepeatedCharacterViaLoop();
     }
 
-    private static void reverseString(){
-        ReverseString reverseString=new ReverseString();
+    private static void reverseString() {
+        ReverseString reverseString = new ReverseString();
         reverseString.reverseString("Hi how are you");
     }
 
-    private static void mergedArray(){
-        MergeSortedArrayDec mergeSortedArrayDec =new MergeSortedArrayDec();
-        int[] arrayOne = {0,3,4,31,38};
-        int[] arrayTwo = {4,6,30,46};
-        mergeSortedArrayDec.mergeSortedArray(arrayOne,arrayTwo);
+    private static void mergedArray() {
+        MergeSortedArrayDec mergeSortedArrayDec = new MergeSortedArrayDec();
+        int[] arrayOne = {0, 3, 4, 31, 38};
+        int[] arrayTwo = {4, 6, 30, 46};
+        mergeSortedArrayDec.mergeSortedArray(arrayOne, arrayTwo);
     }
 
-    private static void myArrayDec(){
-        MyArrayDec myArrayDec=new MyArrayDec();
+    private static void myArrayDec() {
+        MyArrayDec myArrayDec = new MyArrayDec();
         myArrayDec.push("a");
         myArrayDec.push("b");
         myArrayDec.push("d");
         myArrayDec.push("e");
         myArrayDec.printNameArray();
-        myArrayDec.insert(2,"c");
+        myArrayDec.insert(2, "c");
         myArrayDec.printNameArray();
         myArrayDec.delete(2);
         myArrayDec.delete(2);
         myArrayDec.printNameArray();
     }
 
-    private static void findCommonItems(){
-         String[] arrayOne={"a","b","c","x"};
-         String[] arrayTwo={"z","y","x"};
-        FindCommonItem findCommonItem=new FindCommonItem();
-        boolean commonItem=findCommonItem.findCommonItemEfficiant(arrayOne,arrayTwo);
-        out.println("Common Item: "+commonItem);
+    private static void findCommonItems() {
+        String[] arrayOne = {"a", "b", "c", "x"};
+        String[] arrayTwo = {"z", "y", "x"};
+        FindCommonItem findCommonItem = new FindCommonItem();
+        boolean commonItem = findCommonItem.findCommonItemEfficiant(arrayOne, arrayTwo);
+        out.println("Common Item: " + commonItem);
     }
 
-    private static void collectionOfSum(){
+    private static void collectionOfSum() {
         int[] num = {1, 2, 3, 5};
-        PairOfNumberEqualsToSum pairOfNumberEqualsToSum =new PairOfNumberEqualsToSum();
-        pairOfNumberEqualsToSum.findPairOfSumEqualsToNumberInEfficiantWay(num,8);
+        PairOfNumberEqualsToSum pairOfNumberEqualsToSum = new PairOfNumberEqualsToSum();
+        pairOfNumberEqualsToSum.findPairOfSumEqualsToNumberInEfficiantWay(num, 8);
     }
 
     private static boolean isValidParenthesis(String s) {
@@ -291,10 +292,10 @@ public class LogicalProgram {
                 stackList.add(currentChar);
             }
 
-            if(isClosingBracketFound(closingBracketList, currentChar)){
-                if(stackList.isEmpty()){
+            if (isClosingBracketFound(closingBracketList, currentChar)) {
+                if (stackList.isEmpty()) {
                     return false;
-                }else if(!removeOpenBrackets(stackList,currentChar, hashMapParenthesis)){
+                } else if (!removeOpenBrackets(stackList, currentChar, hashMapParenthesis)) {
                     return false;
                 }
             }
@@ -308,11 +309,11 @@ public class LogicalProgram {
         return isValid;
     }
 
-    private static boolean isClosingBracketFound(ArrayList<String> closingBracketList, String currentChar){
+    private static boolean isClosingBracketFound(ArrayList<String> closingBracketList, String currentChar) {
         return closingBracketList.contains(currentChar);
     }
 
-    private static boolean removeOpenBrackets(LinkedList<String> stackList, String currentChar, HashMap<String, String> hashMapParenthesis){
+    private static boolean removeOpenBrackets(LinkedList<String> stackList, String currentChar, HashMap<String, String> hashMapParenthesis) {
         boolean isValid = true;
         int size = stackList.size();
         String stackChar = stackList.get(size - 1);
@@ -601,8 +602,14 @@ public class LogicalProgram {
         out.println("Longest string: " + longString);
     }
 
-    private static void leetCodeEasy(){
+    private static void leetCodeEasy() {
         LeetCodeEasyKt.removeMain();
+    }
+
+    private static void leetCodeMedium() {
+        int num[] = {9, 12, 5, 10, 14, 3, 10};
+        LeetCodeMediumKotlin leetCodeMedium = new LeetCodeMediumKotlin();
+        leetCodeMedium.pivotArray(num, 10);
     }
 
     private static void findMaxAndMin() {
